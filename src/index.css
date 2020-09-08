@@ -28,6 +28,12 @@ width: 1200px;
  
     width: 20cm;
     height: 5cm;
-    padding-left: 12cm;
+    padding-left: 10cm;
   
+}
+.feedback{
+  font-family: fantasy;
+}
+.about{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
