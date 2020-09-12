@@ -8,7 +8,7 @@ class Footer extends React.Component{
         return(
             <Navbar  bg="dark" variant="dark">
                 <Container>
-        <div className="opening-time" className = " footer">
+        <div className="opening-time footer">
         <h3>
           Opening times
         </h3>
@@ -18,7 +18,7 @@ class Footer extends React.Component{
          <span>Sunday: 10:00 — 17:00</span>
         </p>
        </div>
-       <div className="contact-adress" className = " footer">
+       <div className="contact-adress footer">
         <h3>
           Contact
         </h3>
