@@ -10,17 +10,7 @@ console.log(logo);
 
 class Navigationbar extends React.Component {
 
-    constructor(props) {
-        super(props)
-
-     
-
-
-    }
-
-
-
-
+    
     render() {
 
 
