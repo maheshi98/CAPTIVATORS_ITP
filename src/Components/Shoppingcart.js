@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Table from "react-bootstrap/Table";
 import {Link} from 'react-router-dom'
-import ListGroup from "react-bootstrap/ListGroup";
+// import ListGroup from "react-bootstrap/ListGroup";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import CardDeck from "react-bootstrap/CardDeck";
+// import CardDeck from "react-bootstrap/CardDeck";
 import Card from "react-bootstrap/Card";
-import Modal from "react-bootstrap/Modal";
-import {faAlignCenter} from 'react-icons/fa'
+// import Modal from "react-bootstrap/Modal";
+// import {faAlignCenter} from 'react-icons/fa'
 
 class Shoppingcart extends Component {
     constructor(props){

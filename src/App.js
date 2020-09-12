@@ -10,6 +10,7 @@ import Home from './Components/Home';
 import Checkout from './Components/Checkout';
 import Order from './Components/Order';
 import Orderdet from './Components/Orderdet';
+import Menu from './Components/Menu';
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
          <Switch>
            <Route path = "/about" exact component = {About}/>
            <Route path = "/shop" exact component = {Shoppingcart}/>
-           <Route path = "/home" exact component = {Home}/>
+           <Route path = "/" exact component = {Home}/>
            <Route path = "/checkout" exact component = {Checkout}/>
            <Route path = "/orderlist" exact component = {Order}/>
            <Route path = "/orderdet" exact component = {Orderdet}/>
+           <Route path = "/my" exact component = {Menu}/>
          </Switch>
        </Row>
      </Container>

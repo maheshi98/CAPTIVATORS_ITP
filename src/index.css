@@ -35,5 +35,19 @@ width: 1200px;
   font-family: fantasy;
 }
 .about{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Lobster', cursive;
+  padding-left: 13cm;
+  font-size: 25px;
+  margin-top: 1cm;
+}
+
+.about1{
+  font-family: 'Lobster', cursive;
+font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  
+}
+.text{
+  font-size: 20px;
+  font-family: 'Bad Script', cursive;
 }

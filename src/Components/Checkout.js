@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Col from "react-bootstrap/Col";
-import textarea from "react-bootstrap/FormText";
+// import textarea from "react-bootstrap/FormText";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import axios from 'axios';
+// import axios from 'axios';
 import OrderService from '../service/OrderService';
 import MyToast from './MyToast'
 
@@ -41,7 +41,7 @@ class Checkout extends React.Component{
     submitDet(event){
        // alert('email :this.state.email,Address:this.state.address,Land Mark:this.state.landMark,City:this.state.city,Zip:this.state.zip, Cutomer Name:this.state.name+',Contact Number:'+this.state.number+',Description:'+this.state.description+'');
         event.preventDefault();
-        const isvalid = this.validate
+        // const isvalid = this.validate
         let order = {email :this.state.email,address:this.state.address,landMark:this.state.landMark,city:this.state.city,zip:this.state.zip, name:this.state.name ,number:this.state.number,description:this.state.description}
         console.log('order =>' + JSON.stringify(order));
 
@@ -68,21 +68,24 @@ class Checkout extends React.Component{
         OrderService.getOrder().then((res)=>{
              this.setState({order : res.data});
         });
-     
+    
         
          OrderService.getOrderbyId(this.state.id).then((res) =>{
+            
+             
              let order = res.data;
              this.setState({email : order.email ,
                  address : order.address,landMark :order.landMark , city:order.city , zip:order.zip , name:order.name , number:order.number, description:order.description})
          })
      }
 
-    
 
   
     render(){
         return( 
+            
             <div>
+                
                <div style = {{"display" : this.state.show ? "block" :"none" }}>
 
                    <MyToast  children = {{show:this.state.show , message :"checkout successfully!"}}/>

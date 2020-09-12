@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container , Navbar , Col} from 'react-bootstrap';
+import {Container , Navbar } from 'react-bootstrap';
 import {FaPhoneAlt , FaSearchLocation} from 'react-icons/fa'
 class Footer extends React.Component{
 
@@ -8,7 +8,7 @@ class Footer extends React.Component{
         return(
             <Navbar  bg="dark" variant="dark">
                 <Container>
-        <div class="opening-time" className = " footer">
+        <div className="opening-time" className = " footer">
         <h3>
           Opening times
         </h3>
@@ -18,7 +18,7 @@ class Footer extends React.Component{
          <span>Sunday: 10:00 — 17:00</span>
         </p>
        </div>
-       <div class="contact-adress" className = " footer">
+       <div className="contact-adress" className = " footer">
         <h3>
           Contact
         </h3>

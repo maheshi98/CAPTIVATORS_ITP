@@ -3,6 +3,12 @@ import {Card , Table , Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 class Order extends React.Component{
 
+    constructor(props) {
+        super(props)
+    
+        localStorage.setItem("isAdmin",true)
+    }
+    
     render(){
         return(
            <Card className = {"border border-light bg-light text-black"} style={{ alignContent:'center', width:'30cm'}}>
