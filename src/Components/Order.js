@@ -11,10 +11,10 @@ class Order extends React.Component{
     
     render(){
         return(
-           <Card className = {"border border-light bg-light text-black"} style={{ alignContent:'center', width:'30cm'}}>
-             <Card.Header> <h2>Order List</h2></Card.Header>
+           <Card className = {"border border-dark bg-dark text-white"} style={{ alignContent:'center', width:'30cm'}}>
+             <Card.Header align = "center"> <h3>Order List</h3></Card.Header>
              <Card.Body>
-                 <Table boardered hover striped variant = "grey">
+                 <Table boardered hover striped variant = "dark">
                      <thead>
                          <tr>
                              <th>Order ID</th>

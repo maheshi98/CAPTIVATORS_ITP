@@ -17,6 +17,7 @@ class Orderdet extends React.Component {
 
         // this.deleteOrder= this.deleteOrder.bind(this);
         this.state = {
+            message :'Pending',
             order: []
         };
 
@@ -61,15 +62,20 @@ class Orderdet extends React.Component {
     //}
     //})
 
+    changeMessage= (orderID) =>{
+        this.setState({
+            message:'Delivered'
+        })
+    }
 
 
     render() {
         return (
             <div>
-                <Card className={"border border-light bg-light text-black"} style={{ alignContent: 'center', width: '35cm' }}>
+                <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm' }}>
                     <Card.Header> <h3 className="text-center">Order Details</h3></Card.Header>
                     <Card.Body>
-                        <Table hover striped variant="grey" responsive>
+                        <Table hover striped variant="dark" responsive>
                             <thead>
                                 <tr>
                                     <th>Email</th>
@@ -89,17 +95,23 @@ class Orderdet extends React.Component {
                                             <tr key={order.orderID}>
                                                 <td>{order.email}</td>
                                                 <td>{order.address}</td>
-                                                <td>{order.landMark}</td>
+                                                <td>{order.Landmark}</td>
                                                 <td>{order.name}</td>
                                                 <td>{order.number}</td>
                                                 <td>{order.description}</td>
-                                                <td>{order.status}</td>
+                                                <td>{this.state.message}</td>
                                                 <td>
                                                     <ButtonGroup>
                                                         <button className="btn btn-danger" onClick={() => {
                                                             this.deleteOrder(order.orderID)
                                                         }}>
                                                             Delete
+                                                        </button>
+                                                        <button className="btn btn-primary" style={{marginLeft:'0.5cm'}}
+                                                        onClick={() => {
+                                                            this.changeMessage(order.orderID)
+                                                        }}>
+                                                            Confirm
                                                         </button>
                                                     </ButtonGroup>
                                                 </td>
@@ -112,6 +124,7 @@ class Orderdet extends React.Component {
                     </Card.Body>
                     
                 </Card>
+                <hr/>
                 <FeedbackList />
             </div>
         )
