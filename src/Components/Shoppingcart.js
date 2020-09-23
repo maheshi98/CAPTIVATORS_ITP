@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Table from "react-bootstrap/Table";
 import {Link} from 'react-router-dom'
-// import ListGroup from "react-bootstrap/ListGroup";
+ import ListGroup from "react-bootstrap/ListGroup";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import Form from "react-bootstrap/Form";
@@ -22,7 +22,59 @@ class Shoppingcart extends Component {
         }
     }
     
+    calcTotal() {
+        var totalprice = 0;
+    
+        this.state.ShoppingcartList.map((item) => {
+
+            totalprice = totalprice +item.productPrice;
+        });
+        return parseFloat(totalprice).toFixed(2);
+
+    }
+
+    renderShoppingCart(list) {
+
+      
+
+
+
+    let tableContent = (list === undefined || list === null || list.length === 0) ? null : (
+
+        list.map((item) => {
+
+            return (
+                <ListGroup.Item variant="success">
+                <Row>
+                    <Col xs="7">
+                        {item.productName}
+                    </Col>
+                    <Col xs="4">
+                        { parseFloat(item.productPrice).toFixed(2)}
+                    </Col>
+                    <Col xs="1">
+                        <a href="#" className="ml-auto btn btn-danger btn-sm"  onClick={(event) => this.clearCartById(item.cartId,event)}>
+                            <span className="fa fa-trash"></span>
+                        </a>
+                    </Col>
+                </Row>
+
+
+            </ListGroup.Item>
+            );
+
+
+        }));
+    return (
+
+        <ListGroup>
+            {tableContent}
+        </ListGroup>
+
+    );
+}
     render() {
+        let ShoppingCartList = this.renderShoppingCart(this.state.ShoppingcartList);
        
         return (
             <div>
@@ -34,8 +86,9 @@ class Shoppingcart extends Component {
                 <tr>
                     <th>Product</th>
                     <th>UnitPrice</th>
+                    <th>Quantity</th>
                     <th>Discount</th>
-                    {/*<th>Quantity</th>*/}
+                   
                     <th>Price</th>
                     <th>Action</th>
 

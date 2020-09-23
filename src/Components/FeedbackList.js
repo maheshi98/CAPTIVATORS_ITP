@@ -52,10 +52,10 @@ export default class Feedbacklist extends Component {
 
                    <MyToast  children = {{show:this.state.show , message :"Delete successfully!" }}/>
                    </div> 
-            <Card className={"border border-light bg-light text-black"} style={{ alignContent: 'center', width: '35cm' }}>
+            <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm' }}>
                 <Card.Header> <h3 className="text-center">Customer Feedback</h3> </Card.Header>
                 <Card.Body>
-                    <Table hover striped variant="grey">
+                    <Table hover striped variant="dark">
                         <thead>
                             <tr>
                                 <th>Feedback</th>
