@@ -75,12 +75,16 @@ class UserLoginComponent extends Component {
         
         if(this.state.isValid == true){
           if(user.role == 1){
+            window.sessionStorage.setItem("UserRole",1);
             this.state.isFound = true;
             this.props.history.push('/CustomerProfile');
+            window.sessionStorage.setItem("UserRole",1);
           }
           else if(user.role == 2){
+            window.sessionStorage.setItem("UserRole",2);
             this.state.isFound = true;
             this.props.history.push('/CustomerProfile');
+            window.sessionStorage.setItem("UserRole",2);
           }
         } else if(this.state.isValid == false && this.state.isFound == true) {
           this.state.isFound = true;
@@ -112,7 +116,7 @@ class UserLoginComponent extends Component {
       return (
         <div class="">
         
-        <Navigationbar></Navigationbar>
+       
         <center>
         
         <h1 id="login">User Login Form</h1>

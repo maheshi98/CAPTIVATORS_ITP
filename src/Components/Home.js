@@ -17,7 +17,7 @@ class Home extends React.Component{
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 style={{fontFamily:"italic"}}>"We Brings You the Best.."</h3>
+            <h3 className = "text" style={{fontFamily:"italic"}}>"We Brings You the Best.."</h3>
            
           </Carousel.Caption>
         </Carousel.Item>
@@ -29,7 +29,7 @@ class Home extends React.Component{
           />
       
           <Carousel.Caption>
-            <h3 style={{fontFamily:"italic"}}>"Everything here we brings with our love"</h3>
+            <h3 className = "text" style={{fontFamily:"italic"}}>"Everything here we brings with our love"</h3>
             
           </Carousel.Caption>
         </Carousel.Item>
@@ -41,7 +41,7 @@ class Home extends React.Component{
           />
       
           <Carousel.Caption>
-            <h3 style={{fontFamily:"italic"}}>"Please come and feel the joy of our beloved foods"</h3>
+            <h3 className = "text" style={{fontFamily:"italic"}}>"Please come and feel the joy of our beloved foods"</h3>
             
           </Carousel.Caption>
         </Carousel.Item>

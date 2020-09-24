@@ -19,7 +19,7 @@ class About extends React.Component {
           <Card.Text className="about">
             "Since 2018".
     </Card.Text>
-    <p className="text"  >
+    <p className="text1"  >
              "Turn your anonymous visitors into known guests you can email by collecting email addresses on your website. Some restaurants, like Smith & Wollensky Steakhouse, have an email signup link, while others use pop-ups when landing on the website. In all cases, make sure you have a good reason for someone to give you their email address - such as notifications about upcoming events, exclusive promotions, menu specials, or even fun updates from the staff."
            </p>
           <Card.Link href="https://www.facebook.com/glasgowlk/" style={{ color: "black" }}>
