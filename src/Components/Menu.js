@@ -1,59 +1,145 @@
-import React, { Component } from 'react'
-import {Card , Form} from 'react-bootstrap';
-import Col from "react-bootstrap/Col";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+
+import React, { Component } from 'react';
+//import {CommonGet, CommonPost} from "../../config";
+//import {toast, ToastContainer} from "react-toastify";
+
+import {Card,Image,Row} from "react-bootstrap";
+//import empimg from "../../Images/noimg.jpg";
+//import CardGroup from "react-bootstrap/CardGroup";
+/////////import Carousel from "react-bootstrap/Carousel";
+////import img1 from "../../Images/img01.jpg";
+//import img2 from "../../Images/img02.jpg";
+//import img5 from "../../Images/img00.jpg";
+
+import MenuService from '../services/MenuService';
+
+class Menu extends Component {
+    constructor(props){
+        super(props);
+         this.state = {
+             menuDetails: []
+        };
+        
+    }
+
+    componentDidMount(){
+        MenuService.getMenuDetails().then((res) =>{
+        this.setState({menuDetails: res.data}); 
+    });
+}
+render(){
+  return(
+      
+      
+
+      <Card  className={"border border-dark bg-dark text-white"}>
+     
+      
+      <Card.Body>
+      
+      <table  className = "table table-striped table-hover table-dark table-bordered ">
+     
+       <tbody>
 
 
-export default class Menu extends Component {
-    constructor(props) {
-        super(props)
+       
+ 
 
-        this.submitDet= this.submitDet.bind(this);
-        this.state = {
+         {
+              this.state.menuDetails.map(
+                  menuDetails =>
+                  
+                  <td key = {menuDetails.id}>
+                      <tr><Image src={menuDetails.imgURL} roundedRectangle width="200" height ="180"/></tr><tr></tr>
+                      <tr>CATEGORY : {menuDetails.category}</tr> 
+                      <tr>FOOD NAME : {menuDetails.foodName}</tr> 
+                      <tr>DESCRIPTION : {menuDetails.description}</tr> 
+                      <tr>PRICE : {menuDetails.price}</tr> 
+
+                      <td><button  className="btn btn-info">ADD TO CART</button> </td>
+                      
+                      
+                      
+
+                  </td>
+              )
+          }
+     
+          <tr align= "center">
+  
+          </tr>
+      </tbody>
+      </table>
+      </Card.Body>
+      </Card>
+       
+      
+
+  );
+
+}
+}
+
+
+export default Menu;
+
+// import React, { Component } from 'react'
+// import {Card , Form} from 'react-bootstrap';
+// import Col from "react-bootstrap/Col";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+
+
+// export default class Menu extends Component {
+//     constructor(props) {
+//         super(props)
+
+//         this.submitDet= this.submitDet.bind(this);
+//         this.state = {
                  
-        }
+//         }
 
         
-    }
+//     }
 
-    componentDidMount() {
+//     componentDidMount() {
         
-    }
+//     }
 
-    submitDet(){
-        this.props.history.push("/shop")
-    }
+//     submitDet(){
+//         this.props.history.push("/shop")
+//     }
 
-    render() {
-        return (
-            <div>
-            <Card style={{ width: '8cm' }}>
-            <Card.Body>
-          <Card.Title></Card.Title>
+//     render() {
+//         return (
+//             <div>
+//             <Card style={{ width: '8cm' }}>
+//             <Card.Body>
+//           <Card.Title></Card.Title>
           
-          <img
-            src="https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Spinach-Tomato-Pasta-bowl.jpg" alt="Logo" style={{width:"7cm"}}
+//           <img
+//             src="https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Spinach-Tomato-Pasta-bowl.jpg" alt="Logo" style={{width:"7cm"}}
 
-          />
-        <br/>
-        <Card.Text as={Col} >
-        <Form.Group  as={Col} controlId="">
-                                <Form.Label>Creamy pasta : </Form.Label>
-                                <Form.Label>Rs 750.00</Form.Label>
+//           />
+//         <br/>
+//         <Card.Text as={Col} >
+//         <Form.Group  as={Col} controlId="">
+//                                 <Form.Label>Creamy pasta : </Form.Label>
+//                                 <Form.Label>Rs 750.00</Form.Label>
                                 
-                            </Form.Group>
-              <button onClick= {this.submitDet}>
-              <FontAwesomeIcon icon={faCartPlus} size="3x" color="red"/> 
-              </button>
+//                             </Form.Group>
+//               <button onClick= {this.submitDet}>
+//               <FontAwesomeIcon icon={faCartPlus} size="3x" color="red"/> 
+//               </button>
               
-        </Card.Text>
+//         </Card.Text>
       
          
-        </Card.Body>
+//         </Card.Body>
                 
-                </Card> 
-            </div>
-        )
-    }
-}
+//                 </Card> 
+//             </div>
+//         )
+//     }
+// }
+
