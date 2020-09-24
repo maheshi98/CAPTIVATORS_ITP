@@ -87,17 +87,17 @@ class RegisterUserComponent extends Component {
     render() {
        return (
 
-       <div className="registeruser">
-        <Navigationbar></Navigationbar>
-         <div class="userprofile">
+       <div className="registeruser" style={{ alignContent:'center', width:'20cm'}}>
+        
+         <div class="userprofile" style={{ alignContent:'center', width:'20cm'}}>
        
  
          
-        <div className="new">
-          <div className="row">
-            <div className="card col-md-6 offset-md-3 offset-md-3" variant ="dark">
-             <div className = "card-body">
-         <form method="POST" onSubmit= {this.handleSubmit} width = "50%" >
+        <div className="new" style={{ alignContent:'center', width:'20cm'}}>
+          <div className="row" style={{ alignContent:'center', width:'20cm'}}>
+            <div className="card col-md-6 offset-md-3 offset-md-3" variant ="dark" style={{ alignContent:'center', width:'20cm'}}>
+             <div className = "card-body" style={{ alignContent:'center', width:'20cm'}}>
+         <form method="POST" onSubmit= {this.handleSubmit} style={{ alignContent:'center', width:'20cm'}} >
          <font size="5">Create Your Own Account</font>
          <div class="form-group row">
               <label  class="col-sm-2 col-form-label">Name</label>

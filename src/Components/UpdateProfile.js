@@ -86,7 +86,7 @@ class UpdateProfileComponent extends Component {
     render() {
         return (
             
-            <div className="updateprofile">
+            <div className="updateprofile" style={{ alignContent:'center', width:'40cm'}}>
             <div class="userprofile">
             <ul class="nav2">
                 <li class="list1"><a class="nav" href="">HOME</a></li>

@@ -61,7 +61,7 @@ width: 1200px;
 	border-radius : 20px;
 	background-color:whitesmoke;
 
-=======
+}
 .feedback{
   font-family: fantasy;
 }
@@ -79,7 +79,15 @@ font-family: 'Shadows Into Light', cursive;
   
 }
 .text{
+  font-size: 30px;
+  font-family: 'Bad Script', cursive;
+  color: aliceblue;
+
+}
+
+.text1{
   font-size: 20px;
   font-family: 'Bad Script', cursive;
+  color: black
 
 }
