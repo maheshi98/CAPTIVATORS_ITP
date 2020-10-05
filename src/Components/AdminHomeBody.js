@@ -12,8 +12,13 @@ import {Link} from 'react-router-dom';
 
 
 class  AdminHomebody extends Component{
+
+  
+    
     render(){
+
         return (
+            
             <table class = "imageTable">
             <tr>
                 

@@ -1,6 +1,6 @@
  import axios from 'axios';
 
- const Menu_ApI_BASE_URL = "http://localhost:8081/api/v1/menuDetails";
+ const Menu_ApI_BASE_URL = "http://localhost:8080/api/v1/menuDetails";
 
 class MenuService{
     getMenuDetails(){
