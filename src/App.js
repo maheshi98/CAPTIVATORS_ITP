@@ -60,6 +60,11 @@ import UserLoginComponent from '../src/Components/UserLogin';
 import CustomerProfileComponent from '../src/Components/CustomerProfile';
 import AddPromotionsComponent from '../src/Components/AddPromotions';
 import ListPromotionsComponent from '../src/Components/ListPromotions';
+import AdminHomeBody from './Components/AdminHomeBody';
+import FoodItemList from './Components/FoodItemList';
+import AddFoodItem from './Components/AddFoodItem';
+import UpdateFoodItem from './Components/UpdateFoodItem';
+import Body from './Components/Body';
 import React from 'react';
 import {Container , Row} from 'react-bootstrap';
 import Navigationbar from './Components/Navigationbar'
@@ -91,6 +96,12 @@ class App extends Component{
             <Route path = "/orderlist" exact component = {Order}/>
             <Route path = "/orderdet" exact component = {Orderdet}/>
             <Route path = "/my" exact component = {Menu}/>
+            <Route path = "/admin" exact component = {AdminHomeBody}/>
+            <Route path="/FoodItemList"exact component = {FoodItemList}/> 
+            <Route path="/add-Menu-Details"exact component = {AddFoodItem}/>
+            <Route path="/UpdateFoodItem/:id"exact component = {UpdateFoodItem}/> 
+            <Route path="/body"exact component = {Body}/>
+            
             {/* <Route path="/UserLogin" component={UserLoginComponent}/>
             <Route path="/registeruser" component={RegisterUserComponent}/> */}
 

@@ -106,65 +106,71 @@ class UserLoginComponent extends Component {
        
       }
      
-
-
-
-
-
  
     render() {
       return (
-        <div class="">
-        
-       
-        <center>
-        
-        <h1 id="login">User Login Form</h1>
-        </center>
-        
-        <br/>
+        // <div class="">
+        // <center>      
+        // <h1 id="login">User Login Form</h1>
+        // </center>
+        // <br/> 
+        // <center>
+        // <div class="login">
+        // <h2 id="login">Login Here</h2>
+        // <Form method='' action='' name="Cuslogin">
+        // <label>Email</label>
+        // <input type = "email" value={this.state.email}  onChange={this.handleChange} className="form-control"name="email" placeholder="Enter Email" required/>
+        // <label>Password</label>
+        // <div>
+        // <input type = "password" value={this.state.password} onChange={this.handleChange}className="form-control" name="password" placeholder="Enter Password" required/>
+        // </div>        
+        // <a href="forget">Forget Your Password?</a>
+        // <br/><br/>
+        // <Button type="submit" variant="primary btn-lg" onClick={this.shoot} ><font size="4">Login</font></Button>
+        // </Form>
+        // </div>
+        // </center>  
+        // </div>
+
+
+<div>
+<meta charSet="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login</title>
+<div className="container-fluid">
+  <div className="row">
+    <div className="col-md-8 bg-login">
       
-        
-        
-        
-        
+      <img src=""alt="" />
+      <div className="content">
+        <h1 className="brand">Welcome guys</h1>
+        <span>Check our product for your journey</span> <br />
+        <span>Hope your always enjoy, yayy !</span>
+      </div>
+    </div>
+    <div className="col-md-4 login-area">
+      <form>
         <center>
-       
         <div class="login">
-        
         <h2 id="login">Login Here</h2>
-        
-        
-        
         <Form method='' action='' name="Cuslogin">
-        
         <label>Email</label>
         <input type = "email" value={this.state.email}  onChange={this.handleChange} className="form-control"name="email" placeholder="Enter Email" required/>
-        
-        
-        
         <label>Password</label>
         <div>
         <input type = "password" value={this.state.password} onChange={this.handleChange}className="form-control" name="password" placeholder="Enter Password" required/>
-        </div>
-        
-        
-        
+        </div>        
         <a href="forget">Forget Your Password?</a>
-        
         <br/><br/>
-        
-        
-        <Button type="submit" variant="primary btn-lg" onClick={this.shoot} ><font size="4">Login</font></Button>
+        <Button type="submit" variant="primary btn-lg" onClick={this.shoot} className="btn btn-danger btn-block" ><font size="4">Login</font></Button>
         </Form>
-        
-       
         </div>
-        </center>
-        
-       
-        
-        </div>
+        </center>  
+      </form>
+    </div>
+  </div>
+</div>
+</div> 
         
         
         

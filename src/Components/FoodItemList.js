@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 
  
 import { Card,Table,Image } from 'react-bootstrap';
-import MenuService from '../services/MenuService';
+import MenuService from '../Services/MenuService';
 
  export default class FoodItemList extends Component{
 

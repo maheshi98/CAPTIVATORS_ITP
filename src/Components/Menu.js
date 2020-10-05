@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-//import {CommonGet, CommonPost} from "../../config";
-//import {toast, ToastContainer} from "react-toastify";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
-import {Card,Image,Row} from "react-bootstrap";
+import { Card, Image, Row } from "react-bootstrap";
 //import empimg from "../../Images/noimg.jpg";
 //import CardGroup from "react-bootstrap/CardGroup";
 /////////import Carousel from "react-bootstrap/Carousel";
@@ -11,73 +11,110 @@ import {Card,Image,Row} from "react-bootstrap";
 //import img2 from "../../Images/img02.jpg";
 //import img5 from "../../Images/img00.jpg";
 
-import MenuService from '../services/MenuService';
-
+import MenuService from '../Services/MenuService';
+import ShoppingCartService from '../service/ShoppingCartService';
+import Menuitem from './MenuItem';
+import './styles/MenuStyles.css'
 class Menu extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-         this.state = {
-             menuDetails: []
+        this.addToCart = this.addToCart.bind(this);
+        this.state = {
+            menuDetails: []
         };
-        
+
     }
 
-    componentDidMount(){
-        MenuService.getMenuDetails().then((res) =>{
-        this.setState({menuDetails: res.data}); 
-    });
-}
-render(){
-  return(
-      
-      
+    componentDidMount() {
+        MenuService.getMenuDetails().then((res) => {
+            this.setState({ menuDetails: res.data });
+        });
+    }
 
-      <Card  className={"border border-dark bg-dark text-white"}>
-     
-      
-      <Card.Body>
-      
-      <table  className = "table table-striped table-hover table-dark table-bordered ">
-     
-       <tbody>
+    addToCart = (menuDetails) => {
+
+        let formData =
+        {
+
+            productName: menuDetails.foodName,
+            unitPrice: menuDetails.price,
+            quantity: 1,
+            productID: menuDetails.id,
+
+        };
+        console.log('formData =>' + JSON.stringify(formData));
+        ShoppingCartService.AddToCart(formData).then(res => {
+            this.props.history.push('/shop');
+        });
 
 
-       
- 
+    }
+    render() {
+        return (
 
-         {
-              this.state.menuDetails.map(
-                  menuDetails =>
-                  
-                  <td key = {menuDetails.id}>
-                      <tr><Image src={menuDetails.imgURL} roundedRectangle width="200" height ="180"/></tr><tr></tr>
-                      <tr>CATEGORY : {menuDetails.category}</tr> 
-                      <tr>FOOD NAME : {menuDetails.foodName}</tr> 
-                      <tr>DESCRIPTION : {menuDetails.description}</tr> 
-                      <tr>PRICE : {menuDetails.price}</tr> 
+            <div className="container">
+                <main className="grid">
+                    {
+                        this.state.menuDetails.map((menu, key) => {
 
-                      <td><button  className="btn btn-info">ADD TO CART</button> </td>
-                      
-                      
-                      
+                            return <Menuitem menu={menu} addToCart={this.addToCart} key={key} />
+                        })
+                    }
+                </main>
+            </div>
 
-                  </td>
-              )
-          }
-     
-          <tr align= "center">
-  
-          </tr>
-      </tbody>
-      </table>
-      </Card.Body>
-      </Card>
-       
-      
+            // <Card className={"border border-dark bg-dark text-white"}>
 
-  );
 
-}
+            //     <Card.Body>
+
+            //         <table className="table table-striped table-hover table-dark table-bordered ">
+
+            //             <tbody>
+
+
+
+
+
+            //                 {
+            //                     this.state.menuDetails.map(
+            //                         menuDetails =>
+
+            //                             <td key={menuDetails.id}>
+            //                                 <tr><Image src={menuDetails.imgURL} roundedRectangle width="200" height="180" /></tr><tr></tr>
+            //                                 <tr>CATEGORY : {menuDetails.category}</tr>
+            //                                 <tr>FOOD NAME : {menuDetails.foodName}</tr>
+            //                                 <tr>DESCRIPTION : {menuDetails.description}</tr>
+            //                                 <tr>PRICE : {menuDetails.price}</tr>
+
+            //                                 <td> <button
+            //                                     type="button"
+            //                                     className="btn btn-outline-success"
+            //                                     onClick={(event) => this.addToCart(menuDetails, event)}
+            //                                 ><FontAwesomeIcon icon={faCartPlus} size="2x" />
+
+            //                                 </button> </td>
+
+
+
+
+            //                             </td>
+            //                     )
+            //                 }
+
+            //                 <tr align="center">
+
+            //                 </tr>
+            //             </tbody>
+            //         </table>
+            //     </Card.Body>
+            // </Card>
+
+
+
+        );
+
+    }
 }
 
 
@@ -96,14 +133,14 @@ export default Menu;
 
 //         this.submitDet= this.submitDet.bind(this);
 //         this.state = {
-                 
+
 //         }
 
-        
+
 //     }
 
 //     componentDidMount() {
-        
+
 //     }
 
 //     submitDet(){
@@ -116,7 +153,7 @@ export default Menu;
 //             <Card style={{ width: '8cm' }}>
 //             <Card.Body>
 //           <Card.Title></Card.Title>
-          
+
 //           <img
 //             src="https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Spinach-Tomato-Pasta-bowl.jpg" alt="Logo" style={{width:"7cm"}}
 
@@ -126,17 +163,17 @@ export default Menu;
 //         <Form.Group  as={Col} controlId="">
 //                                 <Form.Label>Creamy pasta : </Form.Label>
 //                                 <Form.Label>Rs 750.00</Form.Label>
-                                
+
 //                             </Form.Group>
 //               <button onClick= {this.submitDet}>
 //               <FontAwesomeIcon icon={faCartPlus} size="3x" color="red"/> 
 //               </button>
-              
+
 //         </Card.Text>
-      
-         
+
+
 //         </Card.Body>
-                
+
 //                 </Card> 
 //             </div>
 //         )

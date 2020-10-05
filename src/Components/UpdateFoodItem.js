@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Style.css';
 import {Jumbotron, Form, Col} from 'react-bootstrap';
-import MenuService from '../services/MenuService';
+import MenuService from '../Services/MenuService';
 
 export default class UpdateFoodItem extends Component {
     constructor (props){

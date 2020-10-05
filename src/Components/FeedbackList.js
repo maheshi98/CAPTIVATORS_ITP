@@ -3,6 +3,8 @@ import { Card, Table, ButtonGroup } from 'react-bootstrap';
 import FeedbackService from '../service/FeedbackService';
 import axios from 'axios';
 import MyToast from './MyToast'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 export default class Feedbacklist extends Component {
     constructor(props) {
@@ -76,7 +78,7 @@ export default class Feedbacklist extends Component {
                                                 <button className="btn btn-danger" onClick={() => {
                                                             this.deleteFeedback(feedback.id)
                                                         }}>
-                                                        Delete
+                                                        <FontAwesomeIcon icon={faTrash} size="1x" />
                                          </button>
                                                 </ButtonGroup>
                                             </td>

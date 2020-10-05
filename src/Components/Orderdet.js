@@ -6,7 +6,8 @@ import FeedbackList from './FeedbackList'
 // import Order from './Order';
 import OrderService from '../service/OrderService';
 
-// import {faTrash} from 'react-icons/fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 class Orderdet extends React.Component {
@@ -105,7 +106,7 @@ class Orderdet extends React.Component {
                                                         <button className="btn btn-danger" onClick={() => {
                                                             this.deleteOrder(order.orderID)
                                                         }}>
-                                                            Delete
+                                                            <FontAwesomeIcon icon={faTrash} size="1x" />
                                                         </button>
                                                         <button className="btn btn-primary" style={{marginLeft:'0.5cm'}}
                                                         onClick={() => {

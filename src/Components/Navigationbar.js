@@ -41,7 +41,7 @@ class Navigationbar extends React.Component {
         this.state.role = sessionStorage.UserRole;
         console.log('sessionStorage.UserRole =>' + JSON.stringify(sessionStorage.UserRole));
 
-if(this.state.role == "2"){
+if(this.state.role == "1"){
     return(
         <Navbar bg="dark" variant="dark">
         {/* <sidenavbar/> */}
@@ -54,7 +54,7 @@ if(this.state.role == "2"){
         <Nav className="mr-auto">
             <Link to={""} className="nav-link">Home</Link>
             <Link to={"my"} className="nav-link">Menu</Link>
-            <Link to={"about"} className="nav-link">About Us</Link>
+            <Link to={"body"} className="nav-link">Category</Link>
         </Nav>
         
         <Nav>
