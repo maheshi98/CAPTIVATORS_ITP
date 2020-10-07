@@ -43,7 +43,7 @@ class Navigationbar extends React.Component {
 
 if(this.state.role == "1"){
     return(
-        <Navbar bg="dark" variant="dark">
+        <Navbar.Fragment bg="dark" variant="dark">
         {/* <sidenavbar/> */}
         <Link className="navbar-brand" to={""}>
             <img
@@ -65,7 +65,7 @@ if(this.state.role == "1"){
             <Link to={"admin"} className="nav-link"><RiAdminLine />  Administrator</Link>
             
         </Nav>
-    </Navbar>
+    </Navbar.Fragment>
     )
 }
 else{return (

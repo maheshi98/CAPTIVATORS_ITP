@@ -135,8 +135,8 @@ class Checkout extends React.Component{
                    </div> 
                    <div>
                     <br/><br/>
-                     <Card style={{ alignContent:'center', width:'20cm'}}  >
-                     <Card.Header >Delivery Information</Card.Header>
+                     <Card style={{ alignContent:'center', width:'25cm' , variant: 'grey'}}  >
+                     <Card.Header style={{ fontSize :'20px', fontFamily : 'bold'}} >Delivery Information</Card.Header>
                     <br/>
                     <br/>
                     <Form id = "CusInformation" onSubmit ={this.submitDet}>
@@ -193,7 +193,7 @@ class Checkout extends React.Component{
                             </Form.Group>
                         </Form.Row>
                         <br/><br/>
-                        <Card.Header>Customer Details</Card.Header><br/>
+                        <Card.Header style={{ fontSize :'20px', fontFamily : 'bold'}}>Customer Details</Card.Header><br/>
                         <Form.Group as={Col} controlId="formGridName">
                                 <Form.Label>Customer Name</Form.Label>
                                 <Form.Control required

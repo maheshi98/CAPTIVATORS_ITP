@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 import { Button, ButtonGroup } from "react-bootstrap";
 
@@ -64,7 +64,7 @@ export default class Shoppingcartrow extends Component {
                         <button style={{marginLeft:'0.5cm'}} className="btn btn-primary" onClick={() => {
                             this.props.updateshoppingcart(this.props.item.cartID , this.state.item.quantity)
                         }}>
-                            update
+                            <FontAwesomeIcon icon={faEdit} size="1x" />
                            
                         </button>
                     </ButtonGroup>
