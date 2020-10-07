@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import UtilityService from '../services/UtilityService';
+import UtilityService from '../Services/UtilityService';
 //import {Link} from 'react-router-dom';
 import jsPDF from 'jspdf';
+import Utilitynavbar from './UtilityNavbar';
 
 
 class UtilityList extends Component {
@@ -71,8 +72,9 @@ class UtilityList extends Component {
         return(
             
             <div>
+                <Utilitynavbar></Utilitynavbar>
                 <br/>
-                <h1 className = "text-center">Utility List in Restaurant</h1><br/><br/>
+                <h3 className = "text-center">Utility List in Restaurant</h3><br/><br/>
                 <div className = "row">
                         <button style = {{marginLeft: "150px"}} className = "btn btn-primary" onClick = {this.addUtility} > Add New Utility </button>  
                         <button id = "btnDownload" style = {{marginLeft: "20px"}} className = "btn btn-primary" onClick = {this.downloadUtility}> Download </button> 

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import {Form} from 'react-bootstrap';
-import './style.css';
+import './Style.css';
 import {Jumbotron, Col} from 'react-bootstrap';
-import UtilityService from '../services/UtilityService';
+import UtilityService from '../Services/UtilityService';
+import Utilitynavbar from './UtilityNavbar';
+
 
 export default class UtilityYear extends Component {
 
@@ -34,6 +36,9 @@ viewBtn(){
 
   render(){
     return(
+      <div>
+      <div style = {{width : '32cm'}}><Utilitynavbar></Utilitynavbar></div>
+      <br/>
       
       <Jumbotron className = "bg-secondary text-white">
                  
@@ -86,7 +91,7 @@ viewBtn(){
           </form>
       </Col>  
   </Jumbotron>
-
+</div>
           
 
           

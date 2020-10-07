@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 
 import Card from "react-bootstrap/Card";
 import UserService from '../service/UserService';
-import Navigationbar from '../Components/Navigationbar';
+//import Navigationbar from '../Components/Navigationbar';
 
 
 class RegisterUserComponent extends Component {

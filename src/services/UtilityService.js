@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const Utility_API_BASE_URL = "http://localhost:8081/api/v1/utility";
+const Utility_API_BASE_URL = "http://localhost:8080/api/v1/utility";
 
 class UtilityService {
 

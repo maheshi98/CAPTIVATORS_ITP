@@ -1,7 +1,9 @@
 import React, { Component} from "react";
-import './style.css';
+import './Style.css';
 import {Jumbotron, Col, Form,} from 'react-bootstrap';
-import UtilityService from '../services/UtilityService';
+import UtilityService from '../Services/UtilityService';
+import Utilitynavbar from './UtilityNavbar';
+
 
 export default class UtilityMonth extends Component {
 
@@ -32,6 +34,9 @@ export default class UtilityMonth extends Component {
 
   render(){
     return(   
+      <div>
+      <Utilitynavbar></Utilitynavbar>
+      <br/>
       
       <Jumbotron className = "bg-secondary text-white">
 
@@ -105,7 +110,7 @@ export default class UtilityMonth extends Component {
       </Col> 
 
   </Jumbotron>       
-
+</div>
     );
   }
 }

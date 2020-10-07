@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../login.css';
 import Card from "react-bootstrap/Card";
 import Form from 'react-bootstrap/Form'
-import Navigationbar from '../Components/Navigationbar';
+//import Navigationbar from '../Components/Navigationbar';
 import UserService from '../service/UserService';
 import Button from 'react-bootstrap/Button';
 import { FaSitemap } from 'react-icons/fa';

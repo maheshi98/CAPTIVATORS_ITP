@@ -1,8 +1,10 @@
 import React, { useState, useEffect} from "react";
-import './style.css';
+import './Style.css';
 import {Line} from 'react-chartjs-2';
 import { Jumbotron } from "react-bootstrap";
 import UtilityYear from "./UtilityYear";
+import Utilitynavbar from './UtilityNavbar';
+
 
 
     const ChartOfUtilityYear = () => {
