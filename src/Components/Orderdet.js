@@ -5,6 +5,8 @@ import { Card, Table, ButtonGroup } from 'react-bootstrap';
 import FeedbackList from './FeedbackList'
 // import Order from './Order';
 import OrderService from '../service/OrderService';
+import Pdfcomp from './Pdfcomp';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -125,9 +127,13 @@ class Orderdet extends React.Component {
                     </Card.Body>
                     
                 </Card>
+               
                 <hr/>
+               
                 <FeedbackList />
+                <Pdfcomp/>
             </div>
+          
         )
 
     }

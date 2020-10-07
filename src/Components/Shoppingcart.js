@@ -40,46 +40,7 @@ class Shoppingcart extends Component {
 
     }
 
-    // renderShoppingCart(item) {
-
-
-
-
-
-    // let tableContent = (item === undefined || item === null || item.length === 0) ? null : (
-
-    //     item.map((item) => {
-
-    //         return (
-    //             <ListGroup.Item variant="success">
-    //             <Row>
-    //                 <Col xs="7">
-    //                     {item.product_name}
-    //                 </Col>
-    //                 <Col xs="4">
-    //                     { parseFloat(item.unit_price).toFixed(2)}
-    //                 </Col>
-    //                 <Col xs="1">
-    //                     <a href="#" className="ml-auto btn btn-danger btn-sm"  onClick={(event) => this.clearCartById(item.cartId,event)}>
-    //                         <span className="fa fa-trash"></span>
-    //                     </a>
-    //                 </Col>
-    //             </Row>
-
-
-    //         </ListGroup.Item>
-    //         );
-
-
-    //     }));
-    // return (
-
-    //     <ListGroup>
-    //         {tableContent}
-    //     </ListGroup>
-
-    // );
-    // }
+   
 
     componentDidMount() {
         ShoppingCartService.getShoppinCart().then((res) => {
@@ -110,8 +71,14 @@ class Shoppingcart extends Component {
             this.setState({ ShoppingcartList: res.data });
         })
     }
+
+    Checkout = (ShoppingcartList) =>{
+        let formData = {
+
+        };
+    }
     render() {
-        //     let ShoppingCartList = this.renderShoppingCart(this.state.ShoppingcartList);
+      
 
         return (
             <div>
@@ -166,7 +133,8 @@ class Shoppingcart extends Component {
                     </Row>
                     <Link to={"checkout"} className="nav-link">
                         <br />
-                        <Button variant="success"  >Checkout</Button>
+                        <Button variant="success" onClick={() => {
+                            this.props.Checkout() }}>Checkout</Button>
                     </Link>
                 </Card>
 

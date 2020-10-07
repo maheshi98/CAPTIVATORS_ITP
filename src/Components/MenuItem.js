@@ -37,7 +37,7 @@ export default class Menuitem extends Component {
                     </div>
                     <button
                         type="button"
-                        className="btn btn-primary  btn-block"
+                        className="btn btn-warning btn-block"
                         onClick={(event) => this.props.addToCart(this.props.menu)}
                     >Add To Cart  <FontAwesomeIcon icon={faCartPlus} size="1x" />
 
