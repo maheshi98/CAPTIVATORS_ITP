@@ -1,110 +1,93 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import { FaShoppingCart } from 'react-icons/fa'
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+//import {Link} from 'react-router-dom';
+export default class NavigationBar extends React.Component {
+    render(){
+        return(
+            <Navbar variant="dark" bg="dark" sticky = "top">
+        
+                
+                <Navbar.Brand href="#">Mongo Restaurant</Navbar.Brand>
 
-import { RiAdminLine } from "react-icons/ri";
+              <Nav className="mr-auto" >
 
-import logo from './mangologo.png'; // Tell webpack this JS file uses this image
+              <div><Nav.Link href="AdminHomebody">Admin Home</Nav.Link></div>
 
-console.log(logo);
+              <div class = "NavbarTopic"><NavDropdown title="Settings" id="basic-nav-dropdown">
+
+                                     
+             <NavDropdown.Item href="Online Order Management">Online Order Management</NavDropdown.Item>
+
+            <NavDropdown.Item href="Employee Management">Employee Management</NavDropdown.Item>
+            <NavDropdown.Item href="Menu Update and Organization"> Menu Update and Organization</NavDropdown.Item>
+
+            <NavDropdown.Item href="Resturent Management">Resturent Management</NavDropdown.Item>
+            <NavDropdown.Item href="Inventory Management"> Inventory Management</NavDropdown.Item>
+
+            <NavDropdown.Item href="Finance and Utility Management">Finance and Utility Management</NavDropdown.Item>
+            <NavDropdown.Item href="Delivery and Transport Management">Delivery and Transport Management</NavDropdown.Item>
+
+            <NavDropdown.Item href="Customer Profile management and loyality Management">Customer Profile management and loyality Management</NavDropdown.Item>
 
 
-class Navigationbar extends React.Component {
-    constructor(props){
-    super(props)
-    this.state ={
-        role : null
+            </NavDropdown></div>              
+
+
+              <div><Nav.Link href="AddFoodItem">AddFoodItem</Nav.Link></div>
+              <div><Nav.Link href="UpdateFoodItem">UpdateFoodItem</Nav.Link></div>
+              <div><Nav.Link href="DeleteFoodItem">DeleteFoodItem</Nav.Link></div>
+              <div><Nav.Link href="FoodItemList">FoodItemList</Nav.Link></div>
+              <div><Nav.Link href="body">Home Menu</Nav.Link></div>
+              <div><Nav.Link href="menu">Menu</Nav.Link></div>
+
+              <div class = "NavbarTopic"><NavDropdown title="Category" id="basic-nav-dropdown">
+
+                                     
+                        <NavDropdown.Item href="APPETIZERS">APPETIZERS</NavDropdown.Item>
+                        
+                     
+                        <NavDropdown.Item href="SOUP"> SOUPS</NavDropdown.Item>
+                       
+                        
+                       
+                        <NavDropdown.Item href="MAIN COURSES">MAIN COURSES</NavDropdown.Item>
+                        <NavDropdown.Item href="DINNER ONLY">DINNER ONLY</NavDropdown.Item>
+                       
+                        <NavDropdown.Item href="THE GLASSGOW STYLE RICE">THE GLASSGOW STYLE RICE & CURRY</NavDropdown.Item>
+                       
+                        
+                        <NavDropdown.Item href="CHINEESE">CHINEESE</NavDropdown.Item>
+                        <NavDropdown.Item href="DEVILLED CORNER"> DEVILLED CORNER</NavDropdown.Item>
+                        
+                        <NavDropdown.Item href="ITALIAN">ITALIAN SPECIALITIES</NavDropdown.Item>
+                       
+                        
+                        <NavDropdown.Item href="DESSERT">DESSERT</NavDropdown.Item>
+                        <NavDropdown.Item href="BEVERAGES"> BEVERAGES</NavDropdown.Item>
+                        
+                        <NavDropdown.Item href="FRESH JUICES">FRESH JUICES</NavDropdown.Item>
+                       
+                        
+                        <NavDropdown.Item href="SRI LANKAN STYLE BREAKFAST">SRI LANKAN STYLE BREAKFAST</NavDropdown.Item>
+                        <NavDropdown.Item href="ENGLISH STYLE BREAKFAST"> ENGLISH STYLE BREAKFAST</NavDropdown.Item>
+                      
+                        
+                        
+                        
+                        
+                        
+                    </NavDropdown></div>              
+
+
+                   
+                    
+               </Nav>
+               
+
+            </Navbar> 
+        );
     }
-   }
-
- 
-      
-    componentDidMount() {
-        window.sessionStorage.getItem("UserRole");
-        //window.sessionStorage.getItem("UserId");
-        this.state.role = sessionStorage.UserRole;
-        console.log('sessionStorage.UserRole =>' + JSON.stringify(sessionStorage.UserRole));
-        
-    }
-    
-    
-
-
-    
-    render() {
-       // window.sessionStorage.getItem("UserRole");
-       // console.log('sessionStorage.UserRole =>' + JSON.stringify(this.state.role));
-       // var role = sessionStorage.UserRole;
-        window.sessionStorage.getItem("UserRole");
-        //window.sessionStorage.getItem("UserId");
-        this.state.role = sessionStorage.UserRole;
-        console.log('sessionStorage.UserRole =>' + JSON.stringify(sessionStorage.UserRole));
-
-if(this.state.role == "1"){
-    return(
-        <Navbar.Fragment bg="dark" variant="dark">
-        {/* <sidenavbar/> */}
-        <Link className="navbar-brand" to={""}>
-            <img
-                src={logo} className='logo'
-                alt="React Bootstrap logo"
-            />
-        </Link>
-        <Nav className="mr-auto">
-            <Link to={""} className="nav-link">Home</Link>
-            <Link to={"my"} className="nav-link">Menu</Link>
-            <Link to={"body"} className="nav-link">Category</Link>
-        </Nav>
-        
-        <Nav>
-            <Link to={"shop"} className="nav-link"><FaShoppingCart />      Shopping cart</Link>
-            <Link to={"UserLogin"} className="nav-link">Login</Link>
-            <Link to={"registeruser"} className="nav-link">Register</Link>
-           
-            <Link to={"admin"} className="nav-link"><RiAdminLine />  Administrator</Link>
-            
-        </Nav>
-    </Navbar.Fragment>
-    )
 }
-else{return (
-           
-
-
-    <Navbar bg="dark" variant="dark">
-        {/* <sidenavbar/> */}
-        <Link className="navbar-brand" to={""}>
-            <img
-                src={logo} className='logo'
-                alt="React Bootstrap logo"
-            />
-        </Link>
-        <Nav className="mr-auto">
-            <Link to={""} className="nav-link">Home</Link>
-            <Link to={"my"} className="nav-link">Menu</Link>
-            <Link to={"about"} className="nav-link">About Us</Link>
-        </Nav>
-        <Nav>
-            <Link to={"shop"} className="nav-link"><FaShoppingCart />      Shopping cart</Link>
-            <Link to={"UserLogin"} className="nav-link">Login</Link>
-            <Link to={"registeruser"} className="nav-link">Register</Link>
-           
-           
-            
-        </Nav>
-    </Navbar>
 
 
 
-
-);
-
-
-
-}
-}}
-        
-
-
-export default Navigationbar
