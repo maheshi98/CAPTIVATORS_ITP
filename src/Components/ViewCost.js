@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CostService from '../services/CostService';
+import CostService from '../Services/CostService';
 import {Row} from 'react-bootstrap';
 
 export default class ViewCost extends Component {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import UtilityService from '../services/UtilityService';
+import UtilityService from '../Services/UtilityService';
 import {Row} from 'react-bootstrap';
 
 export default class ViewUtility extends Component {

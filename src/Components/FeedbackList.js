@@ -49,12 +49,13 @@ export default class Feedbacklist extends Component {
 
     render() {
         return (
-            <div>
-            <div style = {{"display" : this.state.show ? "block" :"none" }}>
-
-                   <MyToast  children = {{show:this.state.show , message :"Delete successfully!" }}/>
-                   </div> 
+           
+           
             <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm' }}>
+                 <div style = {{"display" : this.state.show ? "block" :"none" }}>
+
+<MyToast  children = {{show:this.state.show , message :"Delete successfully!" }}/>
+</div> 
                 <Card.Header> <h3 className="text-center">Customer Feedback</h3> </Card.Header>
                 <Card.Body>
                     <Table hover striped variant="dark">
@@ -90,7 +91,7 @@ export default class Feedbacklist extends Component {
                     </Table>
                 </Card.Body>
             </Card>
-            </div>
+           
         )
     }
 }

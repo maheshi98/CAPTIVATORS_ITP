@@ -117,7 +117,7 @@
 // }
 
 
-// import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import UpdatePromotionsComponent from '../src/Components/UpdatePromotions';
@@ -132,9 +132,8 @@ import FoodItemList from './Components/FoodItemList';
 import AddFoodItem from './Components/AddFoodItem';
 import UpdateFoodItem from './Components/UpdateFoodItem';
 import Body from './Components/Body';
-import React from 'react';
 import {Container , Row} from 'react-bootstrap';
-import Navigationbar from './Components/Navigationbar'
+import MyNavBar from './Components/MyNavBar'
 import About from './Components/About'
 import './App.css';
 import Shoppingcart from './Components/Shoppingcart';
@@ -144,13 +143,29 @@ import Checkout from './Components/Checkout';
 import Order from './Components/Order';
 import Orderdet from './Components/Orderdet';
 import Menu from './Components/Menu';
-import { Component } from 'react';
+import { Components } from 'antd/lib/date-picker/generatePicker';
+import Feedbacklist from './Components/FeedbackList';
+
+ import AddUtility from './Components/AddUtility';
+ import UtilityCost from './Components/UtilityCost';
+ import UtilityYear from './Components/UtilityYear';
+ import UtilityMonth from './Components/UtilityMonth';
+ import ProfitMonth from './Components/ProfitMonth';
+ import ProfitYear from './Components/ProfitYear';
+ import ChartOfUtilityMonth from './Components/ChartOfUtilityMonth';
+ import ChartOfUtilityYear from './Components/ChartOfUtilityYear';
+ import ChartOfProfitMonth from './Components/ChartOfProfitMonth';
+ import ChartOfProfitYear from './Components/ChartOfProfitYear';
+ import UtilityList from './Components/UtilityList';
+ import CostList from './Components/CostList';
+ import ViewUtility from './Components/ViewUtility';
+ import ViewCost from './Components/ViewCost';
 
 class App extends Component{
   render(){
     return(
       <Router> 
-      <Navigationbar/>
+      <MyNavBar/>
      
       <hr/>
       <Container>
@@ -168,6 +183,7 @@ class App extends Component{
             <Route path="/add-Menu-Details"exact component = {AddFoodItem}/>
             <Route path="/UpdateFoodItem/:id"exact component = {UpdateFoodItem}/> 
             <Route path="/body"exact component = {Body}/>
+            <Route path="/feedback"exact component = {Feedbacklist}/>
             
             {/* <Route path="/UserLogin" component={UserLoginComponent}/>
             <Route path="/registeruser" component={RegisterUserComponent}/> */}
@@ -181,6 +197,24 @@ class App extends Component{
            <Route path="/CustomerProfile" component={CustomerProfileComponent}/>
            <Route path="/addpromotion" component={AddPromotionsComponent}/>
            <Route path="/viewpromotions" component={ListPromotionsComponent}/>
+
+           <Route path = "/utilityList" exact component={UtilityList} />
+           <Route path = "/add/:ID" exact component={AddUtility} />
+           <Route path = "/profitMonth" exact component={ProfitMonth} />
+           <Route path = "/ChartOfProfitMonth" exact component={ChartOfProfitMonth} />
+           <Route path = "/profitYear" exact component={ProfitYear} />
+           <Route path = "/ChartOfProfitYear" exact component={ChartOfProfitYear} />
+           <Route path = "/utilityMonth" exact component={UtilityMonth} />
+           <Route path = "/ChartOfUtilityMonth" exact component={ChartOfUtilityMonth} />
+           <Route path = "/utilityYear" exact component={UtilityYear} />
+           <Route path = "/ChartOfUtilityYear" exact component={ChartOfUtilityYear} />
+           <Route path = "/costList" exact component={CostList} /> 
+           <Route path = "/add-cost/:idCost" exact component={UtilityCost} />
+           <Route path = "/view-utility/:ID" exact component={ViewUtility} />
+           <Route path = "/view-cost/:idCost" exact component={ViewCost} />
+
+
+        
           </Switch>
         </Row>
       </Container>

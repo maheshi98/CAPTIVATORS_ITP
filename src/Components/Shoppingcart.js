@@ -72,11 +72,6 @@ class Shoppingcart extends Component {
         })
     }
 
-    Checkout = (ShoppingcartList) =>{
-        let formData = {
-
-        };
-    }
     render() {
       
 
@@ -133,8 +128,7 @@ class Shoppingcart extends Component {
                     </Row>
                     <Link to={"checkout"} className="nav-link">
                         <br />
-                        <Button variant="success" onClick={() => {
-                            this.props.Checkout() }}>Checkout</Button>
+                        <Button variant="success">Checkout</Button>
                     </Link>
                 </Card>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import './style.css';
+import './Style.css';
 import {Line} from 'react-chartjs-2';
 import { Jumbotron } from "react-bootstrap";
 import UtilityMonth from './UtilityMonth';
@@ -31,11 +31,20 @@ import UtilityMonth from './UtilityMonth';
                     <center>
                         <div style= {{height: "600px", width: "600px"}}>
                             <UtilityMonth/>
+                            
                         </div>
+                        
                     </center>
                     
+                    <br></br>
+                    <br></br>
                     
-                    <center><div style= {{
+
+                    <center>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <div style= {{
                         height: "800px", width: "800px"
                         
                     }}>

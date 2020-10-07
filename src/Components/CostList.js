@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import CostService from '../services/CostService';
-//import UtilityService from '../services/UtilityService';
+import CostService from '../Services/CostService';
+import UtilityService from '../Services/UtilityService';
+import Utilitynavbar from './UtilityNavbar';
+
 
 class CostList extends Component {
 
@@ -82,11 +84,13 @@ class CostList extends Component {
     }
 
     
-
     render() {
         return(
             
             <div>
+                
+      <div style = {{width : '32cm'}}><Utilitynavbar></Utilitynavbar></div>
+      <br/>
                 <br/>
                 <h1 className = "text-center">Cost of the Utility List</h1><br/><br/>
                 <div className = "row">

@@ -18,11 +18,13 @@ class  AdminHomebody extends Component{
     render(){
 
         return (
-            
+            <div style ={{position : 'center'}}>
             <table class = "imageTable">
             <tr>
                 
-            <th><div><center><img className = 'img1' src= {Img1}alt="order"/>
+            <th><div><center>
+            <Link to="orderdet"><img className = 'img1' src= {Img1}alt="order"/>
+            </Link>
               <div class = "admintext">Online Order Management</div></center></div></th>
 
 
@@ -39,17 +41,20 @@ class  AdminHomebody extends Component{
             </tr>
             
             <tr>
-              <th><div><center><img className = 'img1'src= {Img5}alt="inventory"/>
+              <th><div><center>
+              <Link to="">
+                  <img className = 'img1'src= {Img5}alt="inventory"/></Link>
               <div class = "admintext">Inventory Management</div></center></div></th>
-              <th><div><center><img className = 'img1' src= {Img6}alt="utility"/>
+              <th><div><center><Link to="utilityList"><img className = 'img1' src= {Img6}alt="utility"/></Link>
                   <div class = "admintext">Profit & Utility Management</div></center></div></th>
               <th><div><center><img className = 'img1' src= {Img7}alt="delivery"/>
               <div class = "admintext">Delivery & Transport Management</div></center></div></th>
                <th><div><center><img className = 'img1' src= {Img8}alt="loyality"/>
                <div class = "admintext">Customer Profile Management & Loyality Management</div></center></div></th>
+               
             </tr>
             </table>
-                    
+            </div>        
         );
 }
 }

@@ -74,8 +74,8 @@ class Orderdet extends React.Component {
 
     render() {
         return (
-            <div>
-                <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm' }}>
+            
+                <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', paddingLeft :'5.5m' }}>
                     <Card.Header> <h3 className="text-center">Order Details</h3></Card.Header>
                     <Card.Body>
                         <Table hover striped variant="dark" responsive>
@@ -124,15 +124,17 @@ class Orderdet extends React.Component {
                             </tbody>
 
                         </Table>
+                        <hr/>
                     </Card.Body>
-                    
+                    {/* <FeedbackList />
+                    <hr/>
+                <Pdfcomp/> */}
                 </Card>
                
-                <hr/>
                
-                <FeedbackList />
-                <Pdfcomp/>
-            </div>
+               
+              
+           
           
         )
 

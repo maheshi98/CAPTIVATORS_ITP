@@ -1,9 +1,11 @@
 
 import React, {Component} from 'react';
-import './style.css';
+import './Style.css';
 import {Jumbotron, Form, Col} from 'react-bootstrap';
-import CostService from '../services/CostService';
-import UtilityService from '../services/UtilityService';
+import CostService from '../Services/CostService';
+import UtilityService from '../Services/UtilityService';
+import Utilitynavbar from './UtilityNavbar';
+
 
 export default class UtilityCost extends Component {
 
@@ -124,6 +126,9 @@ export default class UtilityCost extends Component {
 
     render() {
         return(
+            <div>
+            <Utilitynavbar></Utilitynavbar>
+            <br/>
             
             <Jumbotron className = "bg-secondary text-white">
                  
@@ -199,6 +204,7 @@ export default class UtilityCost extends Component {
                     </form>
                 </Col>  
             </Jumbotron>
+            </div>
         );
     }
 }
