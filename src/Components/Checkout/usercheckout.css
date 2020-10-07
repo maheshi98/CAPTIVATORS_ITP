@@ -1,0 +1,145 @@
+.form-control--invalid input,
+.form-control--invalid textarea {
+  border-color: red;
+  background: #ffd1d1;
+}
+.place-form3 {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 60rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    background: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .checkout {
+    text-align: center;
+}
+.delivery-info {
+    text-align: center;
+}
+.button {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ff0055;
+    border-radius: 4px;
+    background: #ff0055;
+    color: white;
+    cursor: pointer;
+    margin-right: 3rem;
+    margin-left: 3.5rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .button--danger {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgb(31, 148, 221);
+    border-radius: 4px;
+    background: rgb(31, 148, 221);
+    color: white;
+    cursor: pointer;
+    margin-right: 3rem;
+    margin-left: 15rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .myButton {
+    box-shadow: 0px 0px 0px 2px #3ea9f0;
+    background:linear-gradient(to bottom, #5cd0ed 5%, #488ce0 100%);
+    background-color:#5cd0ed;
+    border-radius:10px;
+    border:1px solid #7d9cf0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:19px;
+    padding:8px 27px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5d78bd;
+    margin-left: 18rem;
+  }
+  .myButton:hover {
+    background:linear-gradient(to bottom, #488ce0 5%, #5cd0ed 100%);
+    background-color:#488ce0;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+.myButton2 {
+	box-shadow: 0px 0px 0px 2px #f09e9e;
+	background:linear-gradient(to bottom, #ad5868 5%, #ed1a1a 100%);
+	background-color:#ad5868;
+	border-radius:10px;
+	border:1px solid #86b5b3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:8px 27px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #5f6629;
+  margin-left: 4rem;
+}
+.myButton2:hover {
+	background:linear-gradient(to bottom, #ed1a1a 5%, #ad5868 100%);
+	background-color:#ed1a1a;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+
+.jumbotron {
+  width: 30wh;
+  height: 30vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
