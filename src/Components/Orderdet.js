@@ -1,9 +1,6 @@
 import React from 'react'
 import { Card, Table, ButtonGroup } from 'react-bootstrap';
-// import {Link} from 'react-router-dom'
  import axios from 'axios';
-import FeedbackList from './FeedbackList'
-// import Order from './Order';
 import OrderService from '../service/OrderService';
 import Pdfcomp from './Pdfcomp';
 
