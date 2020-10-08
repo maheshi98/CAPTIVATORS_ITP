@@ -52,7 +52,6 @@ class Shoppingcart extends Component {
     deleteShoppingcart = (id) => {
 
         ShoppingCartService.DeleteFromCart(id).then(res => {
-            // console.log('del', res.data);
             this.setState({ "show": true });
             setTimeout(() => this.setState({ "show": false }), 3000)
             this.setState({ ShoppingcartList: res.data });

@@ -1,12 +1,41 @@
 import React from 'react'
-import {Card , Table , Button} from 'react-bootstrap';
+import { Card, Table, ButtonGroup, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
+import ShoppingCartService from '../service/ShoppingCartService';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import generatePDF from "../Services/Orderreport";
+
 class Order extends React.Component{
 
     constructor(props) {
-        super(props)
+
+        super(props);
+        this.state = {
+           
+            orderlist: []
+        };
+
+
+    }
+
+    componentDidMount() {
+        ShoppingCartService.getShoppinCart().then((res) => {
+            console.log(res.data);
+            this.setState({ orderlist: res.data });
+        });
+    }
+
+    calcTotal = () => {
+        var totprice = 0;
+        for (let item of this.state.orderlist) {
+            totprice = (item.unitPrice * item.quantity);
+        }
     
-        localStorage.setItem("isAdmin",true)
+        console.log(totprice);
+
+        return parseFloat(totprice).toFixed(2);
+
     }
     
     render(){
@@ -18,23 +47,53 @@ class Order extends React.Component{
                      <thead>
                          <tr>
                              <th>Order ID</th>
-                             <th>Order Item</th>
-                             <th>Customer name</th>
+                             <th>Product ID</th>
+                             <th>Product Name</th>
                              <th>unit price</th>
                              <th>Quantity</th>
                              <th>Total Price</th>
-                             <th>Status</th>
-                             <th>Action</th>
+                            
                          </tr>
                      </thead>
                      <tbody>
-                         <tr align = "center">
-                             <td colSpan = "8">No List Available </td>
-                         </tr>
-                     </tbody>
+                                {
+                                    this.state.orderlist.map(
+                                        orderlist =>
+                                            <tr key={orderlist.cartID}>
+                                                <td>{orderlist.cartID}</td>
+                                                
+                                                <td>{orderlist.productID}</td>
+                                                <td>{orderlist.productName}</td>
+                                                <td>{orderlist.unitPrice}</td>
+                                                <td>{orderlist.quantity}</td>
+                                    <td>{this.state.orderlist.totprice}</td>
+
+                                   
+
+                                                
+                                               
+                                                <td>
+                                                    <ButtonGroup>
+                                                        <button className="btn btn-danger" >
+                                                            <FontAwesomeIcon icon={faTrash} size="1x" />
+                                                        </button>
+                                                        
+                                                    </ButtonGroup>
+                                                </td>
+                                            </tr>
+                                    )
+                                }
+                            </tbody>
+
 
                  </Table>
              </Card.Body>
+             <button
+              className="btn btn-primary"
+              onClick={() => generatePDF()}
+            >
+              Generate monthly report
+            </button>
              <Link to ={"orderdet"} className = "nav-link">
                     <Button variant="success"  >Check Order Details</Button>
                     </Link>

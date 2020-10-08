@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { jsPDF } from "jspdf";
 import OrderService from '../service/OrderService';
-import Table from "react-bootstrap/Table";
 
 
 
