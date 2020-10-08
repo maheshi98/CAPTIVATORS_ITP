@@ -9,7 +9,7 @@ class Footer extends React.Component{
             <Navbar  bg="dark" variant="dark">
                 <Container>
         <div className="opening-time footer">
-        <h3>
+        <h3 style = {{color : ' white'}}>
           Opening times
         </h3>
         <p>
@@ -19,7 +19,7 @@ class Footer extends React.Component{
         </p>
        </div>
        <div className="contact-adress footer">
-        <h3>
+        <h3 style = {{color : ' white'}}>
           Contact
         </h3>
         <p>

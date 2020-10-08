@@ -17,7 +17,7 @@ class Home extends React.Component{
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className = "text2" >"We Brings You the Best.."</h3>
+            <h3 style = {{color : ' white'}} >"We Brings You the Best.."</h3>
            
           </Carousel.Caption>
         </Carousel.Item>
@@ -29,7 +29,7 @@ class Home extends React.Component{
           />
       
           <Carousel.Caption>
-            <h3 className = "text2" >"Everything here we brings with our love"</h3>
+            <h3 style = {{color : ' white'}} >"Everything here we brings with our love"</h3>
             
           </Carousel.Caption>
         </Carousel.Item>
@@ -41,7 +41,7 @@ class Home extends React.Component{
           />
       
           <Carousel.Caption>
-            <h3 className = "text2" >"Please come and feel the joy of our beloved foods"</h3>
+            <h3 style = {{color : ' white'}} >"Please come and feel the joy of our beloved foods"</h3>
             
           </Carousel.Caption>
         </Carousel.Item>

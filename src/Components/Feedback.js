@@ -86,9 +86,9 @@ class  Feedback extends React.Component{
                      type="text" placeholder="give us your feedback"  onChange  ={this.onChangefeedback} value={this.state.feedback} />
                      <div className="text-danger">{this.state.errors.feedback}</div>
                      </Form.Group>
-                     <Button variant="primary" type="submit" size="small" onChange  ={this.onChangedate} onClick ={this.savefeedback} style={{marginLeft: '1cm'}}value= {this.state.dateTime}>
-                              <br/> <p>submit your feedback</p>
-                    </Button>
+                     <button className ="btn btn-warning" style = {{width : '5cm' , blockSize : '1cm'}} onChange  ={this.onChangedate} onClick ={this.savefeedback} style={{marginLeft: '1cm'}}value= {this.state.dateTime}>
+                              <br/> <p>send</p>
+                    </button>
                     
                         </Form.Row>
                         </Form>
