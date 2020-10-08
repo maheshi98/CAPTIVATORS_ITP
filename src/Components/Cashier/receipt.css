@@ -1,0 +1,97 @@
+.place-form {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    background: lightgrey;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+.checkout {
+    text-align: center;
+}
+.food-menue  {
+    text-align: center;
+}
+.table1 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      width: 25%
+}
+.table1 td {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+.table1 th {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;   
+}
+.table1 tr:hover {
+    background-color: #ddd;
+}
+.table2 {
+    border: 1px solid black;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      width: 100%
+}
+.table2 td {
+    padding: 8px;
+    text-align: center;
+}
+.table2 th {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  
+}
+.table2 tr:hover {
+    background-color: grey;
+}
+.table3 {
+   
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      width: 100%
+}
+.table3 td {
+    padding: 8px;
+    border: 1px solid black;
+    padding: 8px;
+}
+.table3 th {
+    border: 1px solid #000000;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  
+}
+.table3 tr:hover {
+    background-color: grey;
+}
+.table4 {
+    margin-left: 10rem;
+    align-items: center;
+    border: 1px solid black;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 50%
+    
+}
+.table4 td {
+    padding: 8px;
+    border: 1px solid black;
+    padding: 8px;
+}
+.table4 th {
+
+    border: 1px solid #000000;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  
+}
+.table4 tr:hover {
+    background-color: grey;
+}
