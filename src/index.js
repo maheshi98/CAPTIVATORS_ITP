@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'react-mdl/extra/material.css';
-import 'react-mdl/extra/material.js';
+// import 'react-mdl/extra/material.css';
+// import 'react-mdl/extra/material.js';
 import Routes from './Routes';
 
 ReactDOM.render(
   <React.StrictMode>
     <Routes />
+
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

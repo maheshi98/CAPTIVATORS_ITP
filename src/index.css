@@ -28,6 +28,67 @@ width: 1200px;
  
     width: 20cm;
     height: 5cm;
-    padding-left: 12cm;
+    padding-left: 10cm;
   
 }
+
+.login,h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#login{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.infUserProfile{
+	
+	padding : 20px 10px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-bottom:50px;
+	margin: 50px 50px;
+	border-style: solid;
+	border-width: 10px 5px;
+	border-radius : 20px;
+	background-color:whitesmoke;
+}
+
+.infProfile{
+  padding : 20px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-bottom:50px;
+	margin: 20px 250px 20px 250px;
+	border-style: solid;
+	border-width: 10px 5px;
+	border-radius : 20px;
+	background-color:whitesmoke;
+
+}
+.feedback{
+  font-family: fantasy;
+}
+.about{
+  font-family: 'Lobster', cursive;
+  padding-left: 13cm;
+  font-size: 25px;
+  margin-top: 1cm;
+}
+
+.about1{
+  font-family: 'Lobster', cursive;
+font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  
+}
+.text{
+  font-size: 40px;
+  font-family: 'Bad Script', cursive;
+  color: aliceblue;
+
+}
+
+.text1{
+  font-size: 20px;
+  font-family: 'Bad Script', cursive;
+  color: black
+
+}
+
