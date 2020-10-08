@@ -39,7 +39,7 @@ export default class Shoppingcartrow extends Component {
                 <td>{this.state.item.cartID}</td>
                 <td>{this.state.item.productName}</td>
                 <td>{this.state.item.quantity}</td>
-                <td>{this.state.item.unitPrice}</td>
+                <td>Rs.{this.state.item.unitPrice}.00</td>
                 <td>
                     <Button size="sm" variant="dark"
                         onClick={() => {
@@ -51,7 +51,7 @@ export default class Shoppingcartrow extends Component {
                         }}
                     >+</Button>
                 </td>
-                <td>{this.state.item.unitPrice * this.state.item.quantity}</td>
+                <td>Rs.{this.state.item.unitPrice * this.state.item.quantity}.00</td>
 
                 <td>
                     <ButtonGroup>

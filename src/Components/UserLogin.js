@@ -133,7 +133,7 @@ class UserLoginComponent extends Component {
         // </div>
 
 
-<div>
+<div className= "body" style = {{size : '400px'}}>
 <meta charSet="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Login</title>
@@ -142,10 +142,11 @@ class UserLoginComponent extends Component {
     <div className="col-md-8 bg-login">
       
       <img src=""alt="" />
-      <div className="content">
-        <h1 className="brand">Welcome guys</h1>
-        <span>Check our product for your journey</span> <br />
-        <span>Hope your always enjoy, yayy !</span>
+      <div className="content" style = {{paddingRight : '10cm' , fontfamily: 'Bad Script'}}>
+
+        <h1>Welcome To Mango Restaurant</h1>
+        <h5>Check our foods for your journey</h5> 
+        
       </div>
     </div>
     <div className="col-md-4 login-area">

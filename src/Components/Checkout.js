@@ -7,6 +7,7 @@ import Card from "react-bootstrap/Card";
 // import axios from 'axios';
 import OrderService from '../service/OrderService';
 import MyToast from './MyToast'
+import { Link } from 'react-router-dom';
 
 class Checkout extends React.Component{
 
@@ -227,7 +228,9 @@ class Checkout extends React.Component{
                             <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
                         
+                        <Link to="usercheckout">
                             <Button variant="primary" type="submit" onClick= {this.submitDet}>Continue to checkout</Button>
+                            </Link>
                             <Button variant="btn btn-danger" style = {{marginLeft : "10px"}} type="submit" onClick= {this.cancel.bind(this)}>cancel checkout</Button>
                            
                         

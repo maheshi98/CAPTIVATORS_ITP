@@ -2,13 +2,9 @@ import React, { Component } from "react";
 import Form from 'react-validation/build/form';
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import { isEmail, isDate } from "validator";
 import "./usercheckout.css";
-import Button from 'react-bootstrap/Button';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+
 import CheckoutService from "../../Services/CheckoutService";
-import Layout from '../Core/Layout';
 
 
 const required = value => {
@@ -21,35 +17,6 @@ const required = value => {
     }
 };
 
-// const email = value => {
-//     if (!isEmail(value)) {
-//         return (
-//             <div className="alert alert-danger" role="alert">
-//                 <b>**This is not a valid email address</b>
-//             </div>
-//         );
-//     }
-// };
-
-// const address1 = value => {
-//     if (value.length < 3) {
-//         return (
-//             <div className="alert alert-danger" role="alert">
-//                 <b>**Please enter a valid address</b>
-//             </div>
-//         );
-//     }
-// };
-
-// const address2 = value => {
-//     if (value.length < 3) {
-//         return (
-//             <div className="alert alert-danger" role="alert">
-//                 <b>**Please enter a valid address</b>
-//             </div>
-//         );
-//     }
-// };
 
 const city = value => {
     if (value.length < 1 || value.length > 40) {
@@ -91,20 +58,6 @@ const cvv = value => {
     }
 };
 
-// const Date = value => {
-//     if (value.length < 1 || value.length > 5) {
-
-//         return (
-//             <div className="alert alert-danger" role="alert">
-//                 <b>**This is not a valid Date</b>
-//             </div>
-//         );
-//     }
-// };
-
-/*const Register = () => {
-<Layout title="Checkout" description="Payment Information"></Layout>
-};*/
 
 export default class Register extends Component {
 
@@ -156,29 +109,7 @@ export default class Register extends Component {
         
         return year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
     }
-    /* onChangeEmail(e) {
-         this.setState({
-             email: e.target.value
-         });
-     }
- 
-     onChangeAddress1(e) {
-         this.setState({
-             address1: e.target.value
-         });
-     }
- 
-     onChangeAddress2(e) {
-         this.setState({
-             address2:e.target.value
-         });
-     }
-    
-     onChangeZipcode(e) {
-         this.setState({
-             zipcode:e.target.value
-         });
-     } */
+   
 
     Cancel() {
         this.props.history.push('/add ');
@@ -239,36 +170,7 @@ export default class Register extends Component {
                 error: false
             });
     }
-    //handleRegister(e) {
-    //    e.preventDefault();
-    //
-    //     this.setState({
-    //          message:"",
-    //         successful:false
-    ////     });
-    //  }
-
-    /*  componentDidMount() {
-  
-          if(this.state.id === '_add'){
-              return 
-          } else {
-              CheckoutService.getCheckoutDetailsById(this.state.id).then(( res) => {
-                  let CheckoutDetails_ = res.data;
-                  this.setState({
-                      email: CheckoutDetails_.email,
-                      address1: CheckoutDetails_.address1,
-                      address2: CheckoutDetails_.address2,
-                      city: CheckoutDetails_.city,
-                      zipcode: CheckoutDetails_.zipcode,
-                      paymentmethod: CheckoutDetails_.paymentmethod,
-                      card: CheckoutDetails_.card,
-                      cvv: CheckoutDetails_.cvv,
-                      date: CheckoutDetails_.date,
-                  });
-              });
-          }      
-      }*/
+   
     saveCheckoutDetails = (e) => {
         e.preventDefault();
         let checkoutdetails = {
@@ -403,7 +305,7 @@ export default class Register extends Component {
 
                                 <br></br>
                                 <div>
-                                    <button className="myButton" onClick={this.saveCheckoutDetails}>Submit</button>
+                                    <button className="myButton" onClick={this.saveCheckoutDetails} onChange  ={this.onChangedate} value={this.state.feedback}>Submit</button>
                                     <button className="myButton2" onClick={this.Cancel.bind(this)}> Cancel </button>
 
                                 </div>

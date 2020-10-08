@@ -64,9 +64,9 @@ class Order extends React.Component{
                                                 
                                                 <td>{orderlist.productID}</td>
                                                 <td>{orderlist.productName}</td>
-                                                <td>{orderlist.unitPrice}</td>
+                                                <td>Rs.{orderlist.unitPrice}.00</td>
                                                 <td>{orderlist.quantity}</td>
-                                    <td>{this.state.orderlist.totprice}</td>
+                                    <td>Rs.{orderlist.unitPrice * orderlist.quantity}.00</td>
 
                                    
 

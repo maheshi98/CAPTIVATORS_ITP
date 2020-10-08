@@ -7,11 +7,6 @@ import * as serviceWorker from './serviceWorker';
 // import 'react-mdl/extra/material.js';
 import Routes from './Routes';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Routes />
-
-
 
 ReactDOM.render(
   <React.StrictMode>
