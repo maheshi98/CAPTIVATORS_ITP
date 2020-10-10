@@ -1,3 +1,6 @@
+.navbar {
+    min-height: 100px;
+  }
 .place-form {
     position: relative;
     list-style: none;

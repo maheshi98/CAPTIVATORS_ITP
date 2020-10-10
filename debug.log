@@ -1,3 +1,5 @@
+[0914/000052.245:ERROR:settings.cc(401)] Settings magic is not 1129342067
+
 
 [0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
