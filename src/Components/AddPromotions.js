@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import PromotionService from '../service/PromotionService';
+import MyNavBar from './MyNavBar';
 //import './Promotions.css';
 
 
@@ -43,20 +44,15 @@ class AddPromotionsComponent extends Component {
 
     render() {
       return (
-          
-        <div className="addpromotions">
+        <div>
+          <MyNavBar></MyNavBar>
+        <div className="addpromotions" style={{marginTop: "3cm", width :"30cm"}}>
             <ul class="nav2">
-                <li class="list1"><a class="nav" href="">HOME</a></li>
                 <li class="list1"><a class="nav" href="/viewpromotions">ViewPromotions</a></li>
                 <li class="list1"><a class="nav" href="/addpromotion">Add Promotions</a></li>
 
             </ul>
-            
-                
-               
-               
-                
-                
+         
                 <center>
                 <font size="7">Add Promotion</font>
                 </center>
@@ -101,7 +97,7 @@ class AddPromotionsComponent extends Component {
             
       </div>                  
        
-      
+      </div>
       );
       }
 }

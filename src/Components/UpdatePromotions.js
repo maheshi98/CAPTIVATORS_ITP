@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form"
 import PromotionService from '../service/PromotionService';
 import { Jumbotron } from 'react-bootstrap';
+import MyNavBar from './MyNavBar';
 
 
 
@@ -70,9 +71,10 @@ class UpdatePromotionsComponent extends Component {
 
     render() {
       return (
-        <div className="updatepromotions">
+          <div>
+              <MyNavBar></MyNavBar>
+        <div className="updatepromotions" style= {{marginTop:'2.5cm', width :"30cm"}}>
             <ul class="nav2">
-                <li class="list1"><a class="nav" href="">HOME</a></li>
                 <li class="list1"><a class="nav" href="/viewpromotions">ViewPromotions</a></li>
                 <li class="list1"><a class="nav" href="/addpromotion">Add Promotions</a></li>
 
@@ -133,7 +135,7 @@ class UpdatePromotionsComponent extends Component {
                     
                     
             </div>        
-                
+            </div>   
        
       );
     }

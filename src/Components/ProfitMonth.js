@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './Style.css';
 import {Jumbotron, Col, Form} from 'react-bootstrap';
 import Utilitynavbar from './UtilityNavbar';
+import MyNavBar from "./MyNavBar";
 
 
 export default class ProfitMonth extends Component {
@@ -23,9 +24,10 @@ viewBtn(){
 
   render(){
     return(
-
       <div>
-                 <center><Utilitynavbar></Utilitynavbar></center>
+<MyNavBar></MyNavBar>
+      <div style= {{marginTop:'2.5cm'}}>
+                 <div style={{width:'30cm'}}><Utilitynavbar></Utilitynavbar></div>
 
       <Jumbotron className = "bg-secondary text-white">
                  
@@ -84,7 +86,7 @@ viewBtn(){
       </Col>  
   </Jumbotron>
         </div>  
-
+        </div>
     );
   }
 }

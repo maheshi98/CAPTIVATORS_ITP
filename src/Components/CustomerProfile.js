@@ -6,6 +6,8 @@ import {AuditOutlined} from '@ant-design/icons';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import UserService from '../service/UserService';
+import MyNavBar from './MyNavBar';
+
 
 class CustomerProfileComponent extends Component {
   constructor(props){
@@ -75,6 +77,7 @@ deleteCustomer(event){
   render() {
       return (
         <div className="customerprofile">
+          <MyNavBar/>
          <div class="userprofile">
          <ul class="nav2">
            <li class="list1"><a class="nav" href="">HOME</a></li>

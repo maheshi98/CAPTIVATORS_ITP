@@ -1,9 +1,10 @@
 import React from 'react'
-import { Card, Table, ButtonGroup } from 'react-bootstrap';
+import { Card, Table, ButtonGroup , Button } from 'react-bootstrap';
  import axios from 'axios';
 import OrderService from '../service/OrderService';
 import Pdfcomp from './Pdfcomp';
-
+import MyNavBar from './MyNavBar'
+import {Link} from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -47,12 +48,6 @@ class Orderdet extends React.Component {
             this.setState({ order: this.state.order.filter(order => order.id !== id) })
             this.componentDidMount();
         })
-
-
-        // OrderService.deletecheckOrder(id).then(res => {
-           
-        // })
-
     }
     //deleteOrder= (id) =>{
     //axios.delete("http://localhost:8080/api/v1/orderdet/" +OrderID)
@@ -72,17 +67,17 @@ class Orderdet extends React.Component {
     render() {
         return (
             
-                <Card >
-                    <div><button className= "btn btn-primary" >Check Order List </button></div>
+                <div style = {{ alignContent: 'center' , marginLeft: '0'}}>
+                    <MyNavBar/>
+                    <div ><button className= "btn btn-primary" >Check Order List </button></div>
 
-                    <Card.Header> <h3 className="text-center">Order Details</h3></Card.Header>
+                    <Card.Header style = {{ alignContent: 'center'}}> <h3 className="text-center">Order Details</h3></Card.Header>
                     <Card.Body className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', paddingLeft :'5.5m' }}>
                         <Table hover striped variant="dark" responsive>
                             <thead>
                                 <tr>
                                     <th>Email</th>
                                     <th>Address</th>
-                                    <th>Land Mark</th>
                                     <th>Customer Name</th>
                                     <th>Contact Number</th>
                                     <th>Description</th>
@@ -97,7 +92,6 @@ class Orderdet extends React.Component {
                                             <tr key={order.orderID}>
                                                 <td>{order.email}</td>
                                                 <td>{order.address}</td>
-                                                <td>{order.Landmark}</td>
                                                 <td>{order.name}</td>
                                                 <td>{order.number}</td>
                                                 <td>{order.description}</td>
@@ -126,9 +120,13 @@ class Orderdet extends React.Component {
                         <hr/>
                     </Card.Body>
                     <hr/>
-                <Card> </Card>
+                <Card>
+              <Link  to ={"orderlist"} className = "nav-link">
+                    <Button variant="success" style={{textAlign:"center"}} > Order List</Button>
+                    </Link>
+                     </Card>
 
-                </Card>
+                </div>
                
                
                

@@ -3,6 +3,7 @@ import UtilityService from '../Services/UtilityService';
 //import {Link} from 'react-router-dom';
 import jsPDF from 'jspdf';
 import Utilitynavbar from './UtilityNavbar';
+import MyNavBar from './MyNavBar';
 
 
 class UtilityList extends Component {
@@ -70,8 +71,11 @@ class UtilityList extends Component {
 
     render() {
         return(
-            
             <div>
+            <MyNavBar/>
+
+            <div style ={{marginTop:'2.5cm', width: '35cm'}}>
+                
                 <Utilitynavbar></Utilitynavbar>
                 <br/>
                 <h3 className = "text-center">Utility List in Restaurant</h3><br/><br/>
@@ -117,6 +121,7 @@ class UtilityList extends Component {
                     </table>
                     </center>
                 </div>
+            </div>
             </div>
         );
     }

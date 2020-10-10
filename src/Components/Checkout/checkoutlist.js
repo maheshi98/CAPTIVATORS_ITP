@@ -7,7 +7,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEdit,faTrash} from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Card, Table, ButtonGroup } from 'react-bootstrap';
+import MyNavBar from '../MyNavBar';
 
 
 class Details extends Component {
@@ -42,10 +43,12 @@ class Details extends Component {
     render() {
         return (
             <div>
+                <MyNavBar></MyNavBar>
+            <div >
                 <h3 className="list"> <b>Successful</b> </h3>
-                <div className ="ta">
-                    <form className="form3">
-                    <table className ="table5">
+                <Card.Body className ={"border border-dark bg-dark text-white"} style={{marginTop:'2cm' , width:'30cm'}}>
+                    <form className="">
+                    <Table hover striped variant="dark">
 
                         <thead>
                             <tr>
@@ -77,10 +80,11 @@ class Details extends Component {
                                 )
                             }
                         </tbody>
-                    </table>
+                    </Table>
                     </form>
-                </div>
+                </Card.Body>
 
+            </div>
             </div>
         )
     }

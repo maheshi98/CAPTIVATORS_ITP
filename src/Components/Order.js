@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, Table, ButtonGroup, Button} from 'react-bootstrap';
+import { Card, Table,  Button , Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 import ShoppingCartService from '../service/ShoppingCartService';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import generatePDF from "../Services/Orderreport";
+import MyNavBar from './MyNavBar'
+import jsPDF from 'jspdf'; import 'jspdf-autotable';
+
 
 class Order extends React.Component{
 
@@ -20,12 +20,13 @@ class Order extends React.Component{
     }
 
     componentDidMount() {
-        ShoppingCartService.getShoppinCart().then((res) => {
+        ShoppingCartService.getShopp().then((res) => {
             console.log(res.data);
             this.setState({ orderlist: res.data });
         });
+      
     }
-
+   
     calcTotal = () => {
         var totprice = 0;
         for (let item of this.state.orderlist) {
@@ -37,16 +38,74 @@ class Order extends React.Component{
         return parseFloat(totprice).toFixed(2);
 
     }
+    //Report generation part starting from here
+
+    exportPDF = () => {
+
+        console.log( "SSSSSSSSSS" )
+
+        const unit = "pt";
+
+        const size = "A3"; // Use A1, A2, A3 or A4
+
+        const orientation = "landscape"; // portrait or landscape
+
+        const marginLeft = 40;
+
+        const doc = new jsPDF( orientation, unit, size );
+
+        const title = "Order List Of the day ";
+
+        const headers = [["Cart ID","Customer ID","Product ID","Product name","Unit Price","Quantity","Total Price"]];
+
+        const order =  this.state.orderlist.map(
+
+            orderlist=>[
+
+                orderlist.cartID,
+
+                orderlist.userId,
+
+                orderlist.productID,
+
+                orderlist.productName,
+
+                orderlist.unitPrice,
+
+                orderlist.quantity,
+
+                orderlist.unitPrice * orderlist.quantity,
+
+
+            ]
+
+        );
+        let content = {
+            startY: 50,
+            head: headers,
+            body: order
+        };
+
+        doc.setFontSize( 20 );
+        doc.text( title, marginLeft, 40 );
+        require('jspdf-autotable');
+        doc.autoTable( content );
+        doc.save( "order List.pdf" )
+    }
+
     
     render(){
         return(
-           <Card className = {"border border-dark bg-dark text-white"} style={{ alignContent:'center', width:'30cm'}}>
+            <card>
+                <MyNavBar/>
+           <Card className = {"border border-dark bg-dark text-white"} style={{ alignContent:'center', width:'30cm', marginTop :'2.5cm'}}>
              <Card.Header align = "center"> <h3>Order List</h3></Card.Header>
              <Card.Body>
                  <Table boardered hover striped variant = "dark">
                      <thead>
                          <tr>
                              <th>Order ID</th>
+                             <th>Customer ID</th>
                              <th>Product ID</th>
                              <th>Product Name</th>
                              <th>unit price</th>
@@ -60,26 +119,15 @@ class Order extends React.Component{
                                     this.state.orderlist.map(
                                         orderlist =>
                                             <tr key={orderlist.cartID}>
+
                                                 <td>{orderlist.cartID}</td>
-                                                
+                                                <td>{orderlist.userId}</td>
                                                 <td>{orderlist.productID}</td>
                                                 <td>{orderlist.productName}</td>
                                                 <td>Rs.{orderlist.unitPrice}.00</td>
                                                 <td>{orderlist.quantity}</td>
                                     <td>Rs.{orderlist.unitPrice * orderlist.quantity}.00</td>
 
-                                   
-
-                                                
-                                               
-                                                <td>
-                                                    <ButtonGroup>
-                                                        <button className="btn btn-danger" >
-                                                            <FontAwesomeIcon icon={faTrash} size="1x" />
-                                                        </button>
-                                                        
-                                                    </ButtonGroup>
-                                                </td>
                                             </tr>
                                     )
                                 }
@@ -88,16 +136,20 @@ class Order extends React.Component{
 
                  </Table>
              </Card.Body>
-             <button
-              className="btn btn-primary"
-              onClick={() => generatePDF()}
-            >
-              Generate monthly report
-            </button>
+            
              <Link to ={"orderdet"} className = "nav-link">
                     <Button variant="success"  >Check Order Details</Button>
+                    
+
                     </Link>
+                    <Button style={{textAlign:"center"}} onClick={() => this.exportPDF()}> Generate Report</Button>
            </Card>
+           <Container fluid style={{paddingRight:"15%", paddingLeft:"15%"}}>
+
+
+
+</Container> 
+           </card>
         )
         
     }

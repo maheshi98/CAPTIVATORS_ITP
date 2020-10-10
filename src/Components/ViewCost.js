@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CostService from '../Services/CostService';
 import {Row} from 'react-bootstrap';
+import MyNavBar from './MyNavBar';
 
 export default class ViewCost extends Component {
 
@@ -26,7 +27,8 @@ export default class ViewCost extends Component {
 
     render() {
         return(
-            <div> <br/><br/>
+            <div>
+                <MyNavBar/> <br/><br/>
                 <div style={{ height: '500px', width: '650px', background: '#DDF9E4' }} className = " card"> <br/><br/>
                     <h2 className = "text-center">View Cost of the Utility Details</h2> <br/>
                     <div className = "card-body">

@@ -3,8 +3,11 @@ import Form from 'react-validation/build/form';
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import "./usercheckout.css";
+import Button from "react-bootstrap/Button";
+
 
 import CheckoutService from "../../Services/CheckoutService";
+import MyNavBar from "../MyNavBar";
 
 
 const required = value => {
@@ -207,12 +210,12 @@ export default class Register extends Component {
         return (
 
             <div>
-                        <div className="jumbotron">
-                            <h3 className="checkout">Checkout</h3>
+                <MyNavBar></MyNavBar>
 
+                        <div className="" >
                             <h4 className="delivery-info">Payment Information</h4>
                         </div>
-            <div className="col-md-12">
+            <div className="col-md-12" style={{marginTop:'2cm'}}>
                 <div className="card card-container">
                     <Form className="place-form3"
                        // onSubmit={this.saveCheckoutDetails}
@@ -305,8 +308,8 @@ export default class Register extends Component {
 
                                 <br></br>
                                 <div>
-                                    <button className="myButton" onClick={this.saveCheckoutDetails} onChange  ={this.onChangedate} value={this.state.feedback}>Submit</button>
-                                    <button className="myButton2" onClick={this.Cancel.bind(this)}> Cancel </button>
+                                    <Button variant="primary" onClick={this.saveCheckoutDetails} onChange  ={this.onChangedate} value={this.state.feedback} value= {this.state.dateTime}>Submit</Button>
+                                    <Button variant="btn btn-danger" style = {{marginLeft : "10px"}} onClick={this.Cancel.bind(this)}> Cancel </Button>
 
                                 </div>
                             </div>

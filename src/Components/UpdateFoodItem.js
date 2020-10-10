@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Style.css';
 import {Jumbotron, Form, Col} from 'react-bootstrap';
 import MenuService from '../Services/MenuService';
+import MyNavBar from './MyNavBar';
 
 export default class UpdateFoodItem extends Component {
     constructor (props){
@@ -29,7 +30,6 @@ export default class UpdateFoodItem extends Component {
         this.UpdateFoodItem = this.UpdateFoodItem.bind(this);
         
    }
-
 
 UpdateFoodItem = (e) =>{
     e.preventDefault();
@@ -94,8 +94,9 @@ cancel(){
     render(){
         return(
             
-    
-            <Jumbotron className = "bg-secondary text-white">
+    <div>
+        <MyNavBar/>
+            <Jumbotron className = "bg-secondary text-white" style ={{marginTop:'2.5cm'}}>
                  
                 <Col>
                     <form>
@@ -142,7 +143,7 @@ cancel(){
                     </form>
                 </Col>  
             </Jumbotron>
-
+            </div>
             
             
         );

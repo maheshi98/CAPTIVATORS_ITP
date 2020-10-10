@@ -15,6 +15,7 @@ import MenuService from '../Services/MenuService';
 import ShoppingCartService from '../service/ShoppingCartService';
 import Menuitem from './MenuItem';
 import './styles/MenuStyles.css'
+import MyNavBar from './MyNavBar'
 
 class Menu extends Component {
     constructor(props) {
@@ -30,6 +31,8 @@ class Menu extends Component {
         MenuService.getMenuDetails().then((res) => {
             this.setState({ menuDetails: res.data });
         });
+        window.sessionStorage.getItem("UserId");
+        this.state.email = sessionStorage.UserId;
     }
 
     addToCart = (menuDetails) => {
@@ -37,15 +40,21 @@ class Menu extends Component {
         let formData =
         {
 
+            userId : this.state.email,
             productName: menuDetails.foodName,
             unitPrice: menuDetails.price,
             quantity: 1,
             productID: menuDetails.id,
 
         };
+
         console.log('formData =>' + JSON.stringify(formData));
         ShoppingCartService.AddToCart(formData).then(res => {
+            if(sessionStorage.getItem("UserRole")== '2'){
             this.props.history.push('/shop');
+            }else{
+                this.props.history.push('/UserLogin');
+            }
         });
 
 
@@ -53,8 +62,10 @@ class Menu extends Component {
     render() {
         return (
 
-            <div className="container">
-                <main className="grid">
+   
+            <div className="container" >
+                 <MyNavBar/>
+                <main className="grid" style ={{marginTop:'3cm'}}>
                     {
                         this.state.menuDetails.map((menu, key) => {
 
@@ -63,7 +74,6 @@ class Menu extends Component {
                     }
                 </main>
             </div>
-
             // <Card className={"border border-dark bg-dark text-white"}>
 
 

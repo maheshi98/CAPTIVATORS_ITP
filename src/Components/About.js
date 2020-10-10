@@ -1,13 +1,16 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
 import logo from './mangologo.png'; // Tell webpack this JS file uses this image
+import MyNavBar from './MyNavBar'
+
 console.log(logo);
 
 class About extends React.Component {
 
   render() {
     return (
-      <Card style={{ width: '31cm' }}>
+      <div>
+      <Card style={{ width: '31cm' , marginTop : '2.5cm'}}>
         <Card.Body>
           <Card.Title className="about1" style={{ textAlign: "center"}}>About Us</Card.Title>
           
@@ -36,6 +39,7 @@ class About extends React.Component {
                   Location</Card.Link>
         </Card.Body>
       </Card>
+      </div>
     )
 
   }

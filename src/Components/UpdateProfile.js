@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import Form from 'react-bootstrap/Form';
 import UserService from '../service/UserService';
+import MyNavBar from './MyNavBar';
 
 class UpdateProfileComponent extends Component {
     constructor(props){
@@ -85,8 +86,9 @@ class UpdateProfileComponent extends Component {
     } 
     render() {
         return (
-            
-            <div className="updateprofile" style={{ alignContent:'center', width:'40cm'}}>
+          <div>
+            <MyNavBar></MyNavBar>
+            <div className="updateprofile" style={{ alignContent:'center', width:'40cm' , marginTop:'2.5cm'}}>
             <div class="userprofile">
             <ul class="nav2">
                 <li class="list1"><a class="nav" href="">HOME</a></li>
@@ -188,7 +190,7 @@ class UpdateProfileComponent extends Component {
          
                  </div>   
                 </div>
-            
+                </div>
             
       
           );

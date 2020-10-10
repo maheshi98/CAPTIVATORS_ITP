@@ -113,7 +113,7 @@ export default class AddPayment extends Component {
     render() {
         return (
             <form className="place-form1">
-                <div className="jumbotron">
+                <div className="jumbotron1">
                     <h3 className="headd">Cashier Interface</h3>
                 </div>
 

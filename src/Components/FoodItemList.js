@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 //import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 //import{faList} from '@fortawesome/free-soild-svg-icons';
 //import axios from 'axios';
+import MyNavBar from './MyNavBar'
+
 
  
 import { Card,Table,Image } from 'react-bootstrap';
@@ -55,11 +57,11 @@ updateMenuDetails(id){
     render(){
         return(
             
+            <div>
+                  <MyNavBar/>
             
-
-            <Card  className={"border border-dark bg-dark text-white"}>
-           
-            
+            <Card   style={{marginTop :'3cm'}} className={"border border-dark bg-dark text-white"}>
+         
             <Card.Body>
             <div><button className= "btn btn-primary" onClick={this.addMenuDetails}>Add Menu </button></div>
             <table  className = "table table-striped table-hover table-dark table-bordered ">
@@ -102,6 +104,8 @@ updateMenuDetails(id){
             </table>
             </Card.Body>
             </Card>
+            </div>
+
              
             
 

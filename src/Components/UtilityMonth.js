@@ -38,7 +38,7 @@ export default class UtilityMonth extends Component {
       <Utilitynavbar></Utilitynavbar>
       <br/>
       
-      <Jumbotron className = "bg-secondary text-white">
+      <Jumbotron className = "bg-secondary text-white" >
 
         
       <Col>

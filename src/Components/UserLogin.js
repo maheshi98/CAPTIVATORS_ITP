@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import '../login.css';
-import Card from "react-bootstrap/Card";
 import Form from 'react-bootstrap/Form'
-//import Navigationbar from '../Components/Navigationbar';
 import UserService from '../service/UserService';
 import Button from 'react-bootstrap/Button';
-import { FaSitemap } from 'react-icons/fa';
+import MyNavBar from './MyNavBar'
+
 
 class UserLoginComponent extends Component {
   constructor(props){
@@ -77,7 +76,7 @@ class UserLoginComponent extends Component {
           if(user.role == 1){
             window.sessionStorage.setItem("UserRole",1);
             this.state.isFound = true;
-            this.props.history.push('/CustomerProfile');
+            this.props.history.push('/admin');
             window.sessionStorage.setItem("UserRole",1);
           }
           else if(user.role == 2){
@@ -108,7 +107,9 @@ class UserLoginComponent extends Component {
      
  
     render() {
+
       return (
+      
         // <div class="">
         // <center>      
         // <h1 id="login">User Login Form</h1>
@@ -132,17 +133,18 @@ class UserLoginComponent extends Component {
         // </center>  
         // </div>
 
+<div>
+<MyNavBar/>
 
-<div className= "body" style = {{size : '400px'}}>
+<div className= "body"style ={{ marginTop:'3cm' , marginBottom : "3cm"}}>
+
 <meta charSet="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Login</title>
 <div className="container-fluid">
   <div className="row">
     <div className="col-md-8 bg-login">
-      
-      <img src=""alt="" />
-      <div className="content" style = {{paddingRight : '10cm' , fontfamily: 'Bad Script'}}>
+            <div className="content" style = {{paddingRight : '10cm' , fontfamily: 'Bad Script'}}>
 
         <h1>Welcome To Mango Restaurant</h1>
         <h5>Check our foods for your journey</h5> 
@@ -172,7 +174,7 @@ class UserLoginComponent extends Component {
   </div>
 </div>
 </div> 
-        
+</div>      
         
         
   

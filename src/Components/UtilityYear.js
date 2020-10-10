@@ -4,6 +4,7 @@ import './Style.css';
 import {Jumbotron, Col} from 'react-bootstrap';
 import UtilityService from '../Services/UtilityService';
 import Utilitynavbar from './UtilityNavbar';
+import MyNavBar from "./MyNavBar";
 
 
 export default class UtilityYear extends Component {
@@ -37,7 +38,9 @@ viewBtn(){
   render(){
     return(
       <div>
-      <div style = {{width : '32cm'}}><Utilitynavbar></Utilitynavbar></div>
+        <MyNavBar></MyNavBar>
+      <div style = {{width : '32cm' , marginTop:'2.5cm'}}>
+        <Utilitynavbar></Utilitynavbar></div>
       <br/>
       
       <Jumbotron className = "bg-secondary text-white">

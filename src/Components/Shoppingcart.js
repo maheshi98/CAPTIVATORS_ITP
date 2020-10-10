@@ -11,6 +11,8 @@ import ShoppingCartService from '../service/ShoppingCartService';
 
 import MyToast from './MyToast';
 import Shoppingcartrow from './ShoppingCartRow';
+import MyNavBar from './MyNavBar'
+
 
 
 class Shoppingcart extends Component {
@@ -20,6 +22,9 @@ class Shoppingcart extends Component {
             show: false,
             updateShow:false,
             ShoppingcartList: [],
+            currentUser : [],
+            userInvalid : [],
+          
             isLoaded: false,
             total: 0,
             isPayareaHidden: true
@@ -43,12 +48,16 @@ class Shoppingcart extends Component {
    
 
     componentDidMount() {
-        ShoppingCartService.getShoppinCart().then((res) => {
+        window.sessionStorage.getItem("UserId");
+        let userId = sessionStorage.UserId;
+        
+        ShoppingCartService.getShoppinCart(userId).then((res) => {
 
-            this.setState({ ShoppingcartList: res.data });
+            this.setState({ ShoppingcartList: res.data,});
         });
+       
     }
-
+   
     deleteShoppingcart = (id) => {
 
         ShoppingCartService.DeleteFromCart(id).then(res => {
@@ -70,12 +79,14 @@ class Shoppingcart extends Component {
             this.setState({ ShoppingcartList: res.data });
         })
     }
+   
 
     render() {
       
-
         return (
-            <div>
+           
+            <div >
+                <MyNavBar/>
                 <div style={{ "display": this.state.show ? "block" : "none" }}>
 
                     <MyToast children={{ show: this.state.show, message: "Delete successfully!" }} />
@@ -84,7 +95,7 @@ class Shoppingcart extends Component {
 
 <MyToast children={{ show: this.state.updateShow, message: "updated successfully!" }} />
 </div>
-                <Card className={"border border-light bg-light text-black"} style={{ alignContent: 'center', width: '20cm' }}>
+                <Card className={"border border-light bg-light text-black"} style={{ alignContent: 'center', width: '20cm', marginTop:'3cm' }}>
                     <br />
                     <h2>Shoppingcart</h2>
                     <Table responsive>
@@ -97,6 +108,7 @@ class Shoppingcart extends Component {
                                 <th>Action</th>
                                 <th>Net price</th>
                                 <th>Delete</th>
+
 
                             </tr>
                         </thead>
@@ -133,7 +145,7 @@ class Shoppingcart extends Component {
 
             </div>
         )
-
+                        
     }
 }
 

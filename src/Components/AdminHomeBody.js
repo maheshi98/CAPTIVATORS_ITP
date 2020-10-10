@@ -9,6 +9,8 @@ import Img6 from './image/utility.jpg'
 import Img7 from './image/deliver.png'
 import Img8 from './image/customer.png'
 import {Link} from 'react-router-dom';
+import MyNavBar from './MyNavBar';
+
 
 
 class  AdminHomebody extends Component{
@@ -16,10 +18,12 @@ class  AdminHomebody extends Component{
   
     
     render(){
+        if(sessionStorage.getItem("UserRole") == '1'){
 
         return (
-            <div style ={{position : 'center'}}>
-            <table class = "imageTable">
+            <>
+                <MyNavBar/>
+            <table class = "imageTable" style ={{position : 'center', marginTop :'2.5cm'}}>
             <tr>
                 
             <th><div><center>
@@ -42,20 +46,21 @@ class  AdminHomebody extends Component{
             
             <tr>
               <th><div><center>
-              <Link to="">
+              <Link to="inventoryapp">
                   <img className = 'img1'src= {Img5}alt="inventory"/></Link>
               <div class = "admintext">Inventory Management</div></center></div></th>
               <th><div><center><Link to="utilityList"><img className = 'img1' src= {Img6}alt="utility"/></Link>
                   <div class = "admintext">Profit & Utility Management</div></center></div></th>
               <th><div><center><img className = 'img1' src= {Img7}alt="delivery"/>
               <div class = "admintext">Delivery & Transport Management</div></center></div></th>
-               <th><div><center><img className = 'img1' src= {Img8}alt="loyality"/>
+               <th><div><center><Link to="viewpromotions"><img className = 'img1' src= {Img8}alt="loyality"/></Link>
                <div class = "admintext">Customer Profile Management & Loyality Management</div></center></div></th>
                
             </tr>
             </table>
-            </div>        
+            </>        
         );
+        }
 }
 }
 export default AdminHomebody;

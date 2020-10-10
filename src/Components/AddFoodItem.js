@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import './Style.css';
-import {Jumbotron, Form, Col} from 'react-bootstrap';
+//import './Style.css';
+import {Jumbotron, Form, Col , Card} from 'react-bootstrap';
 import MenuService from '../Services/MenuService';
+// import { Card } from 'react-mdl';
+import MyNavBar from './MyNavBar';
 
 
 export default class AddFoodItem extends Component{
@@ -86,9 +88,9 @@ componentDidMount(){
     
     render(){
         return(
-            
-    
-            <Jumbotron className = "bg-secondary text-white">
+            <div>
+    <MyNavBar/>
+            <Jumbotron className = "bg-secondary text-white" style={{marginTop :'2.5cm'}}>
                  
                 <Col>
                     <form>
@@ -136,7 +138,7 @@ componentDidMount(){
                 </Col>  
             </Jumbotron>
 
-            
+            </div>
             
         );
     }

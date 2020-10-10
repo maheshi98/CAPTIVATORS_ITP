@@ -23,9 +23,9 @@ class Footer extends React.Component{
           Contact
         </h3>
         <p>
-          <span><FaPhoneAlt/>  000 9283 8456</span><br/> 
-          <span><FaSearchLocation/>  15 Florida Ave</span><br/> 
-          <span>  Palo-Alto, 1111 CA</span>
+          <span><FaPhoneAlt/> 077 735 5999</span><br/> 
+          <span><FaSearchLocation/>Colombo - Kandy Rd</span><br/> 
+          <span> Kalagedihena</span>
         </p>
       </div>
       <div className = " footer">
