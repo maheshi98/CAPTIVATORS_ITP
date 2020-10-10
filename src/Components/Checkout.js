@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card";
 import OrderService from '../service/OrderService';
 import MyToast from './MyToast'
 import { Link } from 'react-router-dom';
+import MyNavBar from './MyNavBar';
 
 class Checkout extends React.Component{
 
@@ -38,6 +39,7 @@ class Checkout extends React.Component{
         console.log('order =>' + JSON.stringify(order));
        
         OrderService.createOrder(order).then(res => {
+            this.props.history.push('/usercheckout')
             if(res.data != null){
                 this.setState({"show":true});
                 setTimeout(() => this.setState({"show" :false}) , 3000)
@@ -45,7 +47,9 @@ class Checkout extends React.Component{
             }else{
                 this.setState({"show" :false})
             }
+          
         });
+
     }
     }
     detailChange(event){
@@ -54,6 +58,11 @@ class Checkout extends React.Component{
         });
 
     }
+    // // submitDet(){
+    // //     if(this.validate()){        this.props.history.push('/FoodItemList');
+    // // }
+    
+    // }
     cancel(){
         this.props.history.push("/shop")
     }
@@ -129,14 +138,14 @@ class Checkout extends React.Component{
         return( 
             
             <div>
-                
-               <div style = {{"display" : this.state.show ? "block" :"none" }}>
+                <MyNavBar></MyNavBar>
+               <div style = {{"display" : this.state.show ? "block" :"none"  }}>
 
                    <MyToast  children = {{show:this.state.show , message :"checkout successfully!"}}/>
                    </div> 
                    <div>
                     <br/><br/>
-                     <Card style={{ alignContent:'center', width:'25cm' , variant: 'grey'}}  >
+                     <Card style={{ alignContent:'center', width:'25cm' , variant: 'grey',  marginTop:'2.0cm'}}  >
                      <Card.Header style={{ fontSize :'20px', fontFamily : 'bold'}} >Delivery Information</Card.Header>
                     <br/>
                     <br/>

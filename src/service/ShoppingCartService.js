@@ -4,7 +4,10 @@ const CART_BASE_URI = "http://localhost:8080/api/v1/shopping"
 
 class ShoppingCartService {
 
-    getShoppinCart() {
+    getShoppinCart(userId) {
+        return axios.get(CART_BASE_URI+"/user/"+userId)
+    }
+    getShopp() {
         return axios.get(CART_BASE_URI)
     }
 

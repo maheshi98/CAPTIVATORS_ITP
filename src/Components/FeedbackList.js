@@ -5,6 +5,8 @@ import axios from 'axios';
 import MyToast from './MyToast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import MyNavBar from './MyNavBar'
+
 
 export default class Feedbacklist extends Component {
     constructor(props) {
@@ -49,9 +51,10 @@ export default class Feedbacklist extends Component {
 
     render() {
         return (
-           
-           
-            <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm' }}>
+           <div>
+             <MyNavBar/>
+            <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', marginTop:'2.5cm' }}>
+          
                  <div style = {{"display" : this.state.show ? "block" :"none" }}>
 
 <MyToast  children = {{show:this.state.show , message :"Delete successfully!" }}/>
@@ -91,6 +94,7 @@ export default class Feedbacklist extends Component {
                     </Table>
                 </Card.Body>
             </Card>
+            </div>
            
         )
     }

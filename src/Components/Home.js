@@ -3,13 +3,18 @@ import {Carousel} from 'react-bootstrap';
 // import image from "./image1.jpg"
 import About from './About'
 import Feedback from './Feedback';
+import {Container , Row} from 'react-bootstrap';
+import MyNavBar from './MyNavBar';
+
+
 
 class Home extends React.Component{
 
    render(){
        return(
          <div>
-        <Carousel className ="slideshow">
+<MyNavBar/>
+        <Carousel className ="slideshow"  style ={{ marginTop:'3cm'}}>
         <Carousel.Item>
           <img
             className="d-block w-100 slide" 

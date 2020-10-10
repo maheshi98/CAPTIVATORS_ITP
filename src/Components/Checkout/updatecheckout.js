@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import CheckoutService from "../../Services/CheckoutService";
+import MyNavBar from "../MyNavBar";
 
 const required = value => {
     if(!value){
@@ -282,6 +283,8 @@ export default class Update extends Component {
     }*/
     render() {
         return (
+            <div>
+                <MyNavBar></MyNavBar>
             <div className="col-md-12">
                 <div className="card card-container">
                  <Form className="place-form3"
@@ -290,7 +293,7 @@ export default class Update extends Component {
                        this.form = c;
                     }}
                     >   
-                    <div className="jumbotron">
+                    <div className="jumbotron1">
                     <h3 className="checkout">Checkout</h3>
                     
                     <h4 className="delivery-info">Update Payment Information</h4>
@@ -401,6 +404,7 @@ export default class Update extends Component {
                         />
                     </Form>
                 </div>
+            </div>
             </div>
         );
     }

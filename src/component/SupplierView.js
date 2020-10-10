@@ -3,8 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import {PencilFill, PlusCircleFill, TrashFill} from 'react-bootstrap-icons';
+//import {PencilFill, PlusCircleFill, TrashFill} from 'react-bootstrap-icons';
 import API from '../api';
+import MyNavBar from '../Components/MyNavBar';
 
 const SupplierView = (props) => {
 
@@ -42,10 +43,10 @@ const SupplierView = (props) => {
                     <Button className='btn-warning' onClick={() => {
                         props.onEditClick(supplier.id)
                     }}>
-                        <PencilFill/>
+                        {/* <PencilFill/> */}
                     </Button>
                     <Button className='btn-danger' onClick={() => handleDelete(supplier.id)}>
-                        <TrashFill/>
+                        {/* <TrashFill/> */}
                     </Button>
                 </div>
             </td>
@@ -53,7 +54,9 @@ const SupplierView = (props) => {
     );
 
     return (
+
         <React.Fragment>
+            <MyNavBar></MyNavBar>
             <Row>
                 <Col className="text-center">
                     <h1 className="display-4">SUPPLIER INFORMATION</h1>
@@ -74,7 +77,7 @@ const SupplierView = (props) => {
                                     props.setPreviousContentForSupplierAdd('supplier-view');
                                     props.onContentChange('supplier-add');
                                 }}>
-                                    <PlusCircleFill/>
+                                    {/* <PlusCircleFill/> */}
                                 </Button>
                             </th>
                         </tr>

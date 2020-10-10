@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import UserService from '../service/UserService';
 //import Navigationbar from '../Components/Navigationbar';
+import MyNavBar from './MyNavBar'
+
 
 
 class RegisterUserComponent extends Component {
@@ -88,8 +90,9 @@ class RegisterUserComponent extends Component {
        return (
 
        <div className="registeruser" style={{ alignContent:'center', width:'20cm'}}>
+         <MyNavBar/>
         
-         <div class="userprofile" style={{ alignContent:'center', width:'20cm'}}>
+         <div class="userprofile" style={{ alignContent:'center', width:'20cm' , marginTop : '2.5cm'}}>
        
  
          
@@ -98,8 +101,8 @@ class RegisterUserComponent extends Component {
             <div className="card col-md-6 offset-md-3 offset-md-3" variant ="dark" style={{ alignContent:'center', width:'20cm'}}>
              <div className = "card-body" style={{ alignContent:'center', width:'20cm'}}>
          <form method="POST" onSubmit= {this.handleSubmit} style={{ alignContent:'center', width:'20cm'}} >
-         <font size="5">Create Your Own Account</font>
-         <div class="form-group row">
+         <font size="5" style={{ alignContent:'center', width:'20cm'}}>Create Your Own Account</font>
+         <div class="form-group row" style={{ alignContent:'center', width:'20cm'}}>
               <label  class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-5">
                 <input type="text" name="firstName" value={this.state.firstName} className="form-control" onChange={this.handleChange} placeholder="   First Name"></input>

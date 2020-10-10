@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import UtilityService from '../Services/UtilityService';
 import {Row} from 'react-bootstrap';
+import MyNavBar from './MyNavBar';
 
 export default class ViewUtility extends Component {
 
@@ -26,7 +27,8 @@ export default class ViewUtility extends Component {
 
     render() {
         return(
-            <div> <br/><br/>
+            <div>
+                <MyNavBar></MyNavBar> <br/><br/>
                 <div style={{ height: '350px', width: '600px', background: '#DDF9E4' }} className = " card"> <br/><br/>
                     <h2 className = "text-center">View Utility Details</h2> <br/>
                     <div className = "card-body">
