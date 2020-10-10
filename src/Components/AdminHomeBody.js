@@ -32,7 +32,7 @@ class  AdminHomebody extends Component{
               <div class = "admintext">Online Order Management</div></center></div></th>
 
 
-              <th><div><center><img className = 'img1' src= {Img2}alt="employee"/>
+              <th><div><center><Link to ="EmpList"><img className = 'img1' src= {Img2}alt="employee"/></Link>
               <div class = "admintext">Employee Management</div></center></div></th>
 
              

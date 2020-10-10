@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Jumbotron, Form, Col , Button } from 'react-bootstrap';
-import SalaryService from '../services/SalaryService';
+import SalaryService from '../Services/SalaryService';
+import MyNavBar from './MyNavBar';
  
 export default class CreateSalary extends Component{
   
@@ -54,8 +55,9 @@ export default class CreateSalary extends Component{
 
     render(){
         return(
-            
-            <Jumbotron className = "bg-secondary text-white">
+            <div>
+              <MyNavBar></MyNavBar>
+            <Jumbotron className = "bg-secondary text-white" style ={{marginTop :"3.5cm" , width :"20cm"}}>
                  
                 <Col>
                 
@@ -108,7 +110,7 @@ export default class CreateSalary extends Component{
                 </Col>  
             </Jumbotron>
 
-            
+            </div> 
             
         );
     }

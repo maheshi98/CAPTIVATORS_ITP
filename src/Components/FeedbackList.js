@@ -53,13 +53,14 @@ export default class Feedbacklist extends Component {
         return (
            <div>
              <MyNavBar/>
-            <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', marginTop:'2.5cm' }}>
+            <Card className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', marginTop:'3.5cm' }}>
           
                  <div style = {{"display" : this.state.show ? "block" :"none" }}>
 
 <MyToast  children = {{show:this.state.show , message :"Delete successfully!" }}/>
 </div> 
-                <Card.Header> <h3 className="text-center">Customer Feedback</h3> </Card.Header>
+                <Card.Header> <h3  className={"border border-dark bg-dark text-white"} >
+                    <center>Customer Feedback</center></h3> </Card.Header>
                 <Card.Body>
                     <Table hover striped variant="dark">
                         <thead>

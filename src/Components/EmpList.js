@@ -1,8 +1,10 @@
 import React,{Component} from 'react';
 import { Card , ButtonGroup } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
-import EmployeeService  from '../services/EmployeeService';
+import EmployeeService  from '../Services/EmployeeService';
 import axios from 'axios';
+import jsPDF from 'jspdf'; import 'jspdf-autotable';
+import MyNavBar from './MyNavBar';
 
 
 export default class EmpList extends Component{
@@ -13,11 +15,16 @@ export default class EmpList extends Component{
       }
 
    this.editEmployee = this.editEmployee.bind(this);
+   this.add = this.AddEmp.bind(this); 
 
     }
 
     editEmployee(id){
         this.props.history.push(`/UpdateEmployee/${id}`);
+    }
+
+    AddEmp(){
+      this.props.history.push(`/CreateEmp`);
     }
 
     componentDidMount(){
@@ -39,13 +46,102 @@ export default class EmpList extends Component{
           this.componentDidMount();
       })
     }
+//Report generation part starting from here
+
+exportPDF = () => {
+
+  console.log( "SSSSSSSSSS" )
+
+
+
+
+
+  const unit = "pt";
+
+  const size = "A3"; // Use A1, A2, A3 or A4
+
+  const orientation = "landscape"; // portrait or landscape
+
+  const marginLeft = 40;
+
+  const doc = new jsPDF( orientation, unit, size );
+
+
+
+  // const jsPDF = require('jspdf');
+
+  // require('jspdf-autotable');
+
+
+
+  const title = "Mango Restaurant Employee List ";
+
+  const headers = [["employee ID","First Name","Department","Position"]];
+
+
+
+  // const Order = this.state.Order.map( orderList => [orderList.order_id, orderList.product_id,orderList.productname,orderList.brand, orderList.total_amount, orderList.qty,orderList.email,orderList.address,orderList.purchase_date] );
+
+
+
+  const employees = this.state.employees.map(
+
+    employee=>[
+
+      employee.empID,
+
+      employee.firstName,
+
+      employee.empDep,
+
+      employee.emppost
+
+      ]
+
+  );
+
+
+
+  let content = {
+
+      startY: 50,
+
+      head: headers,
+
+      body: employees
+
+  };
+
+  doc.setFontSize( 20 );
+
+  doc.text( title, marginLeft, 40 );
+
+  require('jspdf-autotable');
+
+  doc.autoTable( content );
+
+  doc.save( "EmployeeList.pdf" )
+
+}
+
+
+
 
     render(){
       return(
-        <div className="form-wrapper">
+        <div >
+          <MyNavBar></MyNavBar>
          
-    <Card style={{ alignContent:'center' , width : '30cm' , paddingLeft : "5.5m"}}>
-    <h3 className="titel"><center>Employee List</center></h3>
+    <Card variant="dark" style={{ alignContent:'center' , width : '30cm' , paddingLeft : "5.5m" , marginTop:"3cm"}}>
+    <Card.Body className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', paddingLeft :'5.5m' }}>
+
+    <h2 className="border border-dark bg-dark text-white" ><center>Employee List</center></h2>
+    <div className = "row">
+      
+      <button style = {{marginLeft: "15px"}} className = "btn btn-primary" onClick={() => this.AddEmp()} > Add New Employee </button>  
+      <button style = {{marginLeft: "10px"}} className = "btn btn-primary" onClick={() => this.exportPDF()} > Download Employee Details </button> 
+      </div>
+      <br/>
    <Table variant="dark" className = "table table - striped table-bordered">
     <thead>
       <tr>
@@ -68,8 +164,8 @@ export default class EmpList extends Component{
             <td>{employee.emppost}</td>
             <td>
             <ButtonGroup>
-                <button className="btn btn-danger" onClick={()=>this.deleteEmployee(employee.id)}>Delete</button>
-                <button className="btn btn-info" onClick = {() => this.editEmployee(employee.id)}>Update</button>
+                <button className="btn btn-danger" style = {{marginLeft: "5px"}} onClick={()=>this.deleteEmployee(employee.id)}>Delete</button>
+                <button className="btn btn-info" style = {{marginLeft: "5px"}} onClick = {() => this.editEmployee(employee.id)}>Update</button>
             </ButtonGroup>     
             </td>
           </tr>
@@ -77,7 +173,7 @@ export default class EmpList extends Component{
       }
     </tbody>
    </Table>
-
+</Card.Body>
   </Card>
            </div>);
     }

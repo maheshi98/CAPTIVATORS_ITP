@@ -194,7 +194,7 @@ export default class Register extends Component {
             this.state.error = false
             CheckoutService.createCheckout(checkoutdetails).then(res => {
                 this.setState({ message: 'Payment added successfully.' });
-                this.props.history.push('/details');
+                // this.props.history.push('/details');
             })
 
         }

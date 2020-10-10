@@ -92,7 +92,7 @@ class RegisterUserComponent extends Component {
        <div className="registeruser" style={{ alignContent:'center', width:'20cm'}}>
          <MyNavBar/>
         
-         <div class="userprofile" style={{ alignContent:'center', width:'20cm' , marginTop : '2.5cm'}}>
+         <div class="userprofile" style={{ alignContent:'center', width:'20cm' , marginTop : '3.5cm'}}>
        
  
          
