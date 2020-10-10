@@ -1,1 +1,34 @@
 [0914/000052.245:ERROR:settings.cc(401)] Settings magic is not 1129342067
+
+
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.750:ERROR:exception_snapshot_win.cc(99)] thread ID 13184 not found in process
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.750:ERROR:exception_snapshot_win.cc(99)] thread ID 6452 not found in process
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 7304 not found in process
+[0906/002846.235:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 2600 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 10736 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 9452 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 6292 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 8768 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 7860 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 9408 not found in process
+[0906/002846.766:ERROR:exception_snapshot_win.cc(99)] thread ID 4060 not found in process
+[0918/133542.566:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0918/133546.259:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0918/133546.468:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0918/133549.362:ERROR:exception_snapshot_win.cc(99)] thread ID 720 not found in process
+
+[0911/123915.571:ERROR:process_info.cc(359)] UncheckedAllocate
