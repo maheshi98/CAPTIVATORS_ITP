@@ -16,18 +16,7 @@
 //   };
 
 //   return (
-//     <div>
-//     <Navbar className= "navbar"  bg="dark" variant="dark" >
-//      <Navbar.Brand >
-//        <Nav.Link href="/EmpList">Employee Management</Nav.Link> </Navbar.Brand>
-//      <Nav className="mr-auto">
-//        <Nav.Link href="/CreateEmp">Add New Employee</Nav.Link>
-//        <Nav.Link href="/SalaryList">Employee Salary Details</Nav.Link>
-//        <Nav.Link href="/CreateSalary">Add New Salary Details</Nav.Link>
-//         </Nav>
-    
-//    </Navbar> <br/> <br/>
-
+//     
 //     <Container>
 //           <Row>
 //               <Col lg = {500} style = {marginLeft} />
@@ -95,6 +84,13 @@ import Feedbacklist from './Components/FeedbackList';
 import InventoryApp from './component/InventoryApp'
 import logout from './Components/logout'
 
+import EmpList from './Components/EmpList';
+import CreateEmp from './Components/CreateEmp';
+import SalaryList from './Components/SalaryList';
+import CreateSalary from './Components/CreateSalary';
+import UpdateSalary from './Components/UpdateSalary';
+import UpdateEmployee from './Components/UpdateEmployee';
+
  
 import Routes from './Routes';
 
@@ -151,7 +147,12 @@ class App extends Component{
            <Route path = "/inventoryapp" exact component={InventoryApp} />
            <Route path = "/logout" exact component={logout} />
 
-
+              <Route exact path="/CreateEmp" component = {CreateEmp}/>
+               <Route exact path="/EmpList" component = {EmpList}/>
+                <Route exact path="/SalaryList" component = {SalaryList}/>
+                 <Route exact path="/CreateSalary" component = {CreateSalary}/>
+                 <Route exact path="/UpdateSalary/:id" component = {UpdateSalary}/>
+                 <Route exact path="/UpdateEmployee/:id" component = {UpdateEmployee}/>
            <Routes/>
 
             

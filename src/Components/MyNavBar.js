@@ -49,7 +49,7 @@ class MyNavBar extends React.Component {
        <Link to ={"about"} className = "nav-link">About Us</Link>
       </Nav>
       <Nav>
-      <Link to ={"shop"} className = "nav-link"><FaShoppingCart/>      Shopping cart</Link>
+      {/* <Link to ={"shop"} className = "nav-link"><FaShoppingCart/>      Shopping cart</Link> */}
       <Link to ={"UserLogin"} className = "nav-link">Login</Link>
       <Link to ={"registeruser"} className = "nav-link">Register</Link>
       <Link to ={"admin"} className = "nav-link"><RiAdminLine/>  Administrator</Link>

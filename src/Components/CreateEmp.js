@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Jumbotron, Form, Col , Row} from 'react-bootstrap';
-import EmployeeService from '../services/EmployeeService';
+import EmployeeService from '../Services/EmployeeService';
+import MyNavBar from './MyNavBar';
+import Employeenavbar from './EmployeeNavbar';
 
 export default class CreateEmp extends Component{
 
@@ -141,15 +143,15 @@ validation(){
 
 render(){
         return(
-            
-            <Jumbotron className = "bg-secondary text-white">
+            <div>
+              <MyNavBar></MyNavBar>
+                 <Employeenavbar></Employeenavbar>
+            <Jumbotron className = "bg-secondary text-white" style ={{width :"30cm"}}>
                  
                 <Col>
                 
                     <form>
                     <center><h2>Add Employee Details</h2></center>
-
-                    <br/> <br/> <br/>
 
                     <Form.Group >
         <Form.Label >Employee Name :</Form.Label>
@@ -269,7 +271,7 @@ render(){
                     </form>
                 </Col>  
             </Jumbotron>
-
+            </div>
             
             
         );
