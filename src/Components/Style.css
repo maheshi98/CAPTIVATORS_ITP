@@ -40,3 +40,80 @@
     height: 40px;
     
 }
+.img1{
+    position: relative;
+    width:300px;
+    height:200px;
+    margin-left:30px;
+    margin-top: 25px;
+    }
+    .img2{
+        position: relative;
+        width:1400px;
+        height:300px;
+        }
+    
+    .h1{
+        color:red;
+        font-size: large;
+        bottom: top;
+    }
+    
+    .admintext {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+    }
+    .text{
+        font-size: 15px;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .boxOutline{
+        margin-left: 240px;
+    }
+    
+    .adminTopic {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .updateItem{
+        font-size: large;
+        font-style: inherit;
+    }
+
+
+
+    .updateBtn {
+        background-color: #424242;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: initial;
+        color: white;
+        width: 120px;
+        height: 40px;
+    }
+
+    .cancelBtn{
+        background-color: #424242;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: initial;
+        color: white;
+        width: 120px;
+        height: 40px;
+        margin-left: 50px;
+    }
+    .Viewbtn{
+        background-color: #424242;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: initial;
+        color: white;
+        width: 100px;
+        height: 30px;
+        margin-left: 1px;
+
+    }
