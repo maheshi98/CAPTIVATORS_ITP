@@ -67,6 +67,7 @@ saveEmployee = (e) =>{
 
               EmployeeService.createEmployee(employee).then(res =>{
                 this.props.history.push("/EmpList")
+                alert("Successfully Added");
               });
             }
 }
@@ -120,11 +121,31 @@ EmailChange = (event) => {
 validation(){
   let errors = {};
   let isValid = true;
+  
+  if(!this.state.empAddress){
+    isValid = false;
+    errors["empAddress"] = "Please fill the Address";
+  }
 
   if(!this.state.firstName){
     isValid = false;
     errors["firstName"] = "Please fill the first name";
   }
+  
+  if(!this.state.pnumber){
+    isValid = false;
+    errors["pnumber"] = "Please fill the Personal Phone Number";
+  }
+  if(!this.state.emppost){
+    isValid = false;
+    errors["emppost"] = "Please fill the Employee Position";
+  }
+
+  if(!this.state.empDep){
+    isValid = false;
+    errors["empDep"] = "Please fill the Employee Department";
+  }
+
   if (typeof this.state.empEmail !== "undefined") {
     
     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
@@ -139,7 +160,13 @@ validation(){
     errors:errors
   });
   return isValid;
+  
+  
+  
+  
 }
+
+
 
 render(){
         return(
@@ -163,7 +190,7 @@ render(){
        
         <Col>
         <Form.Control placeholder="Middle name" controlId="MiddleName"  value = {this.state.middleName}
-         onChange = {this.ChangeMiddleName}required/>
+         onChange = {this.ChangeMiddleName}/>
         </Col>
         <Col>
         <Form.Control placeholder="Last name" controlId="LastName" value = {this.state.lastName}
@@ -178,33 +205,36 @@ render(){
         <Col>
         <Form.Label >National ID card number:</Form.Label>
         <Form.Control  type="text" placeholder="**********v" controlId="empNID" value = {this.state.empNIC}
-         onChange = {this.NICChange} required />
+         onChange = {this.NICChange}  />
         </Col>
         <Col>
         <Form.Label>Employee Number :</Form.Label>
         <Form.Control type="text"  placeholder="Emp***"  controlId="empID" value = {this.state.empID}
-         onChange = {this.EmpNumChange} required/>
+         onChange = {this.EmpNumChange} />
         </Col>
        </Form.Row>
       </Form.Group>
   
         <Form.Group controlId="empAddress">
         <Form.Label> Employee Address:</Form.Label>
-        <Form.Control type="text"  placeholder="No/***" value = {this.state.empAddress}
+        <Form.Control type="text"  placeholder="No/***" name = "empAddress" value = {this.state.empAddress}
          onChange = {this.AddressChange} />
+         <div className = "text-danger">{this.state.errors.empAddress}</div>
         </Form.Group>
      
         <Form.Group>
         <Form.Row>
         <Col>
         <Form.Label >Employee Position :</Form.Label>
-        <Form.Control  type="text" placeholder="position" controlId="emppost" value = {this.state.emppost}
+        <Form.Control  type="text" placeholder="position" controlId="emppost" name = "emppost" value = {this.state.emppost}
          onChange = {this.PositonChange}/>
+         <div className = "text-danger">{this.state.errors.emppost}</div>
         </Col>
         <Col>
         <Form.Label >Employee Department</Form.Label>
-        <Form.Control type="text"  placeholder="Department"  controlId="empDep" value = {this.state.empDep}
+        <Form.Control type="text"  placeholder="Department" name="empDep" controlId="empDep" value = {this.state.empDep}
          onChange = {this.DepChange}/>
+         <div className = "text-danger">{this.state.errors.empDep}</div>
         </Col>
        </Form.Row>
       </Form.Group>
@@ -247,8 +277,9 @@ render(){
         <Form.Label>Employee Phone Number  :</Form.Label>
         <Form.Row>
           <Col>
-        <Form.Control placeholder="Personal" controlId="pnumber" value = {this.state.pnumber}
+        <Form.Control placeholder="Personal" controlId="pnumber" name="pnumber" value = {this.state.pnumber}
          onChange = {this.PnumChange} />
+          <div className = "text-danger">{this.state.errors.pnumber}</div>
           </Col>
           <Col>
         <Form.Control placeholder="Home" controlId="hnumber" value = {this.state.hnumber}

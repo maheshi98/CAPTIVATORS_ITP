@@ -82,7 +82,7 @@ class UserLoginComponent extends Component {
           else if(user.role == 2){
             window.sessionStorage.setItem("UserRole",2);
             this.state.isFound = true;
-            this.props.history.push('/CustomerProfile');
+            this.props.history.push('/');
             window.sessionStorage.setItem("UserRole",2);
           }
         } else if(this.state.isValid == false && this.state.isFound == true) {

@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import{ Button  , Card}from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -7,6 +7,7 @@ import './cashierinterface.css'
 import ItemLineServices from "../../Services/ItemLineServices";
 import CashierService from "../../Services/CashierService";
 import { Link } from 'react-router-dom';
+import MyNavBar from '../MyNavBar';
 
 // const AddPayment = () => {
 //     const [value, setValue] = useState('');
@@ -112,7 +113,15 @@ export default class AddPayment extends Component {
     }
     render() {
         return (
-            <form className="place-form1">
+            <div>
+                <MyNavBar></MyNavBar>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Card >
+            <form className="place-form1" >
                 <div className="jumbotron1">
                     <h3 className="headd">Cashier Interface</h3>
                 </div>
@@ -322,7 +331,8 @@ export default class AddPayment extends Component {
                 </Button>
                 </Link>
             </form>
-
+            </Card>
+            </div>
         );
     }
 

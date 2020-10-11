@@ -40,7 +40,7 @@ class  AdminHomebody extends Component{
               <th><div><center><Link to="FoodItemList"><img className = 'img1' src= {Img3}alt="menu"/></Link>
               <div class = "admintext">Menu Update & Organization</div></center></div></th>
 
-               <th><div><center><Link to="details"><img className = 'img1' src= {Img4}alt="resturent"/></Link>
+               <th><div><center><Link to="add"><img className = 'img1' src= {Img4}alt="resturent"/></Link>
                <div class = "admintext">Resturent Management</div></center></div></th>
             </tr>
             

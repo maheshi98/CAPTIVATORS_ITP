@@ -80,7 +80,7 @@ class MyNavBar extends React.Component {
                    </Nav>
                    <Nav>
                    <Link to ={"shop"} className = "nav-link"><FaShoppingCart/>      Shopping cart</Link>
-                   <Link to ={"UserLogin"} className = "nav-link">Login</Link>
+                   <Link to ={"CustomerProfile"} className = "nav-link">Profile</Link>
                    <Link to ={"registeruser"} className = "nav-link">Register</Link>
                    <Link to ={"logout"} className = "nav-link">logout</Link>
 

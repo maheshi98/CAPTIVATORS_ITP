@@ -71,8 +71,9 @@ class Orderdet extends React.Component {
                     <MyNavBar/>
                     <div ><button className= "btn btn-primary" >Check Order List </button></div>
 
-                    <Card.Header style = {{ alignContent: 'center'}}> <h3 className="text-center">Order Details</h3></Card.Header>
-                    <Card.Body className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', paddingLeft :'5.5m' }}>
+                    <Card.Body className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', paddingLeft :'5.5m', marginTop:"3cm" }}>
+                    <Card.Header  align = "center"> <h3 className={"text-white"}>Customer Detail List</h3></Card.Header>
+
                         <Table hover striped variant="dark" responsive>
                             <thead>
                                 <tr>
@@ -118,14 +119,15 @@ class Orderdet extends React.Component {
 
                         </Table>
                         <hr/>
-                    </Card.Body>
-                    <hr/>
-                <Card>
+                        <div>
               <Link  to ={"orderlist"} className = "nav-link">
                     <Button variant="success" style={{textAlign:"center"}} > Order List</Button>
                     </Link>
-                     </Card>
+                     </div>
 
+                    </Card.Body>
+                    <hr/>
+                
                 </div>
                
                

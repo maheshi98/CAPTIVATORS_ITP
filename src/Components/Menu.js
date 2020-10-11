@@ -4,13 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 import { Card, Image, Row } from "react-bootstrap";
-//import empimg from "../../Images/noimg.jpg";
-//import CardGroup from "react-bootstrap/CardGroup";
-/////////import Carousel from "react-bootstrap/Carousel";
-////import img1 from "../../Images/img01.jpg";
-//import img2 from "../../Images/img02.jpg";
-//import img5 from "../../Images/img00.jpg";
-
 import MenuService from '../Services/MenuService';
 import ShoppingCartService from '../service/ShoppingCartService';
 import Menuitem from './MenuItem';
