@@ -74,10 +74,11 @@ class UtilityList extends Component {
             <div>
             <MyNavBar/>
 
-            <div style ={{marginTop:'2.5cm', width: '35cm'}}>
+            <div style ={{marginTop:'3.5cm', width: '35cm'}}>
                 
                 <Utilitynavbar></Utilitynavbar>
-                <br/>
+                
+                <br></br>
                 <h3 className = "text-center">Utility List in Restaurant</h3><br/><br/>
                 <div className = "row">
                         <button style = {{marginLeft: "150px"}} className = "btn btn-primary" onClick = {this.addUtility} > Add New Utility </button>  

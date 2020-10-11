@@ -29,6 +29,10 @@ export default class ViewCost extends Component {
         return(
             <div>
                 <MyNavBar/> <br/><br/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <div style={{ height: '500px', width: '650px', background: '#DDF9E4' }} className = " card"> <br/><br/>
                     <h2 className = "text-center">View Cost of the Utility Details</h2> <br/>
                     <div className = "card-body">

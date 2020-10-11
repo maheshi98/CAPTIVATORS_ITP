@@ -28,15 +28,18 @@ export default class CreateSalary extends Component{
 
   submitdet(event){
     event.preventDefault();
+    if(this.validation()){
     
     let salary = {empID:this.state.empID, basicSalary:this.state.basicSalary,netSalary:this.state.netSalary, deduction:this.state.deduction, allowance:this.state.allowance , }
     console.log('salary =>' + JSON.stringify(salary))
 
-
+    
     SalaryService.createSalary(salary).then(res =>{
        this.props.history.push("/SalaryList")
+       alert("Successfully Added");
     }
     );
+  }
   }
   detailChange(event){
     this.setState({
@@ -52,6 +55,33 @@ export default class CreateSalary extends Component{
   cancel(){
       this.props.history.push('/SalaryList')
   }
+
+  validation(){
+    let errors = {};
+    let isValid = true;
+
+    if(!this.state.netSalary){
+      isValid = false;
+      errors["netSalary"] = alert("Please fill the netSalary");
+    }
+
+    if(!this.state.basicSalary){
+      isValid = false;
+      errors["basicSalary"] = alert("Please fill the basicSalary");
+    }
+  
+
+    this.setState({
+      errors:errors
+    });
+    return isValid;
+    
+    
+    
+    
+  
+  }
+  
 
     render(){
         return(
@@ -75,16 +105,19 @@ export default class CreateSalary extends Component{
          
         <Form.Group controlId="basicsalary">
         <Form.Label> Basic Salary:</Form.Label>
-        <Form.Control type="text" required name ='basicSalary'
+        <Form.Control type="text"  name ='basicSalary'
         value = {this.state.basicSalary}
        onChange = {this.detailChange} />
+       
         </Form.Group>
+        
 
-        <Form.Group controlId="allowances">
+        <Form.Group controlId="allowance">
         <Form.Label>Allowances:</Form.Label>
-        <Form.Control type="text" required name ='allowance'
+        <Form.Control type="text"  name ='allowance'
         value = {this.state.allowance}
         onChange = {this.detailChange} />
+        
         </Form.Group> 
       
 

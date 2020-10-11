@@ -98,9 +98,10 @@ class Order extends React.Component{
         return(
             <card>
                 <MyNavBar/>
-           <Card className = {"border border-dark bg-dark text-white"} style={{ alignContent:'center', width:'30cm', marginTop :'2.5cm'}}>
-             <Card.Header align = "center"> <h3>Order List</h3></Card.Header>
+           <Card className = {"border border-dark bg-dark text-white"} style={{ alignContent:'center', width:'30cm', marginTop :'3.5cm'}}>
              <Card.Body>
+             <Card.Header align = "center"> <h3 className={"text-white"}>Order List</h3></Card.Header>
+
                  <Table boardered hover striped variant = "dark">
                      <thead>
                          <tr>

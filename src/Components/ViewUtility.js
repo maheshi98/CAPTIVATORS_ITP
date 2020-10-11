@@ -29,6 +29,10 @@ export default class ViewUtility extends Component {
         return(
             <div>
                 <MyNavBar></MyNavBar> <br/><br/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <div style={{ height: '350px', width: '600px', background: '#DDF9E4' }} className = " card"> <br/><br/>
                     <h2 className = "text-center">View Utility Details</h2> <br/>
                     <div className = "card-body">

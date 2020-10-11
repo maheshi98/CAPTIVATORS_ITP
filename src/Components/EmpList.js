@@ -5,7 +5,9 @@ import EmployeeService  from '../Services/EmployeeService';
 import axios from 'axios';
 import jsPDF from 'jspdf'; import 'jspdf-autotable';
 import MyNavBar from './MyNavBar';
-
+import EmployeeNavbar from './EmployeeNavbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 export default class EmpList extends Component{
     constructor(props){
@@ -131,8 +133,10 @@ exportPDF = () => {
       return(
         <div >
           <MyNavBar></MyNavBar>
+          <br></br>
+          <EmployeeNavbar></EmployeeNavbar>
          
-    <Card variant="dark" style={{ alignContent:'center' , width : '30cm' , paddingLeft : "5.5m" , marginTop:"3cm"}}>
+    <Card variant="dark" style={{ alignContent:'center' , width : '30cm' , paddingLeft : "5.5m" , marginTop:"0.5cm"}}>
     <Card.Body className={"border border-dark bg-dark text-white"} style={{ alignContent: 'center', width: '35cm', paddingLeft :'5.5m' }}>
 
     <h2 className="border border-dark bg-dark text-white" ><center>Employee List</center></h2>
@@ -164,8 +168,9 @@ exportPDF = () => {
             <td>{employee.emppost}</td>
             <td>
             <ButtonGroup>
-                <button className="btn btn-danger" style = {{marginLeft: "5px"}} onClick={()=>this.deleteEmployee(employee.id)}>Delete</button>
-                <button className="btn btn-info" style = {{marginLeft: "5px"}} onClick = {() => this.editEmployee(employee.id)}>Update</button>
+                <button className="btn btn-danger" style = {{marginLeft: "5px"}} onClick={()=>this.deleteEmployee(employee.id)}><FontAwesomeIcon icon={faTrash} size="1x" />
+</button>
+                <button className="btn btn-info" style = {{marginLeft: "5px"}} onClick = {() => this.editEmployee(employee.id)}><FontAwesomeIcon icon={faEdit} size="1x" /></button>
             </ButtonGroup>     
             </td>
           </tr>
