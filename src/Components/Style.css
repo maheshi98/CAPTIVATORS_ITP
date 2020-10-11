@@ -1,0 +1,42 @@
+.Vehicle {
+    font-size: 20px;
+}
+
+.Driver {
+    font-size: 20px;
+}
+
+
+.AddBtn 
+{
+    background-color: #424242;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+    color: white;
+    width: 250px;
+    height: 40px;
+
+}
+
+.cancelbtn {
+    background-color: #424242;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+    color: white;
+    width: 250px;
+    height: 40px;
+    margin-left: 50px;
+}
+
+.viewbtn{
+    background-color: #424242;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+    color: white;
+    width: 250px;
+    height: 40px;
+    
+}
