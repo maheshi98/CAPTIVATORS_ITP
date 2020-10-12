@@ -66,18 +66,13 @@ deleteCustomer(event){
     });
     
   } 
-  /*
-  this.email = email;
-		this.fName = fName;
-		this.lName = lName;
-		this.username = username;
-		this.gender = gender;
-		this.password = password;
-		this.otherDetails = otherDetails;*/
+  
   render() {
       return (
         <div className="customerprofile">
           <MyNavBar/>
+          <br></br>
+          <br></br>
          <div class="userprofile">
          <ul class="nav2">
            <li class="list1"><a class="nav" href="">HOME</a></li>
@@ -91,7 +86,7 @@ deleteCustomer(event){
              <div className = "card-body">
          <form  method="POST"  width = "30%">
                 <center>
-                <font size="7">My User Profile</font>
+                <font size="6">Your Profile</font>
                 <br/>
                    
                     <Avatar shape="square"  style={{
@@ -100,7 +95,7 @@ deleteCustomer(event){
                     }} size={175} icon={<UserOutlined />}/>
                     
                     &nbsp;&nbsp;
-                  <font size="5">    UserName:  {this.state.userName}</font></center>
+                  <font size="5">    User Name:  {this.state.userName}</font></center>
                 <br/>
                 <table>
                 

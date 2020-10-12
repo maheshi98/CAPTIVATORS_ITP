@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
 import logo from './mangologo.png'; // Tell webpack this JS file uses this image
-import MyNavBar from './MyNavBar'
 
 console.log(logo);
 
@@ -10,9 +9,9 @@ class About extends React.Component {
   render() {
     return (
       <div>
-      <Card style={{ width: '31cm' , marginTop : '2.5cm'}}>
+      <Card style={{ width: '31cm' , marginTop : '0.5cm'}}>
         <Card.Body>
-          <Card.Title className="about1" style={{ textAlign: "center"}}>About Us</Card.Title>
+          <Card.Title className="about1" style={{ textAlign: "center", fontSize:"50px"}}>About Us</Card.Title>
           
           <img
             src="https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2017/03/31/16884-restaurant-939435960720.jpg?itok=rL03DpS7" alt="Logo" className='image'

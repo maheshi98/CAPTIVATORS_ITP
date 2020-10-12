@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Jumbotron, Form, Col} from 'react-bootstrap';
-import DriverService from '../services/DriverService';
+import DriverService from '../Services/DriverService';
+import MyNavBar from './MyNavBar';
 
 class UpdateDriver extends Component{
     constructor(props){
@@ -134,8 +135,9 @@ class UpdateDriver extends Component{
 
     render(){
         return(
-            
-            <Jumbotron className = "bg-secondary text-white">
+            <div>
+            <MyNavBar></MyNavBar>
+            <Jumbotron className = "bg-secondary text-white" style={{marginTop:"3cm"}}>
                  
                 <Col>
                 
@@ -182,7 +184,7 @@ class UpdateDriver extends Component{
                     </form>
                 </Col>  
             </Jumbotron>
-
+</div>
             
             
         );

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './Style.css'
 import {Jumbotron, Form, Col} from 'react-bootstrap';
-//import {Link} from 'react-router-dom';
-import VehicleService from '../services/VehicleService';
+import VehicleService from '../Services/VehicleService';
+import MyNavBar from './MyNavBar';
 
 
 export default class Form2 extends Component{
@@ -87,8 +87,9 @@ export default class Form2 extends Component{
 
     render(){
         return(
-            
-            <Jumbotron className = "bg-secondary text-white">
+            <div>
+                <MyNavBar></MyNavBar>
+            <Jumbotron className = "bg-secondary text-white" style={{marginTop:"3cm"}}>
                  
                 <Col>
                 
@@ -135,7 +136,7 @@ export default class Form2 extends Component{
                 </Col>  
             </Jumbotron>
 
-            
+            </div>
             
         );
     }

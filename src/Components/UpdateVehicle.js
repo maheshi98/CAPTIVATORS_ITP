@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Jumbotron, Form, Col} from 'react-bootstrap';
-import VehicleService from '../services/VehicleService';
+import VehicleService from '../Services/VehicleService';
+import MyNavBar from './MyNavBar';
 
 class UpdateVehicle extends Component{
     constructor(props){
@@ -90,8 +91,9 @@ class UpdateVehicle extends Component{
     }
     render(){
         return(
-            
-            <Jumbotron className = "bg-secondary text-white">
+            <div>
+            <MyNavBar></MyNavBar>
+            <Jumbotron className = "bg-secondary text-white" style={{marginTop:"3cm"}}>
                  
                 <Col>
                 
@@ -137,7 +139,7 @@ class UpdateVehicle extends Component{
                     </form>
                 </Col>  
             </Jumbotron>
-
+</div>
         );
     }
 }

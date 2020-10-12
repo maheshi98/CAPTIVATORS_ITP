@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import jsPDF from 'jspdf'; import 'jspdf-autotable';
 import MyNavBar from './MyNavBar'
-import { Card,Table,Image } from 'react-bootstrap';
+import { Card,Image } from 'react-bootstrap';
 import MenuService from '../Services/MenuService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'

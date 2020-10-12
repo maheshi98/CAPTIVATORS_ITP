@@ -1,9 +1,6 @@
 
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
-import { Card, Image, Row } from "react-bootstrap";
 import MenuService from '../Services/MenuService';
 import ShoppingCartService from '../service/ShoppingCartService';
 import Menuitem from './MenuItem';
@@ -67,52 +64,7 @@ class Menu extends Component {
                     }
                 </main>
             </div>
-            // <Card className={"border border-dark bg-dark text-white"}>
-
-
-            //     <Card.Body>
-
-            //         <table className="table table-striped table-hover table-dark table-bordered ">
-
-            //             <tbody>
-
-
-
-
-
-            //                 {
-            //                     this.state.menuDetails.map(
-            //                         menuDetails =>
-
-            //                             <td key={menuDetails.id}>
-            //                                 <tr><Image src={menuDetails.imgURL} roundedRectangle width="200" height="180" /></tr><tr></tr>
-            //                                 <tr>CATEGORY : {menuDetails.category}</tr>
-            //                                 <tr>FOOD NAME : {menuDetails.foodName}</tr>
-            //                                 <tr>DESCRIPTION : {menuDetails.description}</tr>
-            //                                 <tr>PRICE : {menuDetails.price}</tr>
-
-            //                                 <td> <button
-            //                                     type="button"
-            //                                     className="btn btn-outline-success"
-            //                                     onClick={(event) => this.addToCart(menuDetails, event)}
-            //                                 ><FontAwesomeIcon icon={faCartPlus} size="2x" />
-
-            //                                 </button> </td>
-
-
-
-
-            //                             </td>
-            //                     )
-            //                 }
-
-            //                 <tr align="center">
-
-            //                 </tr>
-            //             </tbody>
-            //         </table>
-            //     </Card.Body>
-            // </Card>
+            
 
 
 

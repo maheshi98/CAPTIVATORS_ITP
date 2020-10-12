@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Button from 'react-bootstrap/Button';
 
 import '../userprofile.css';
 
@@ -10,9 +9,6 @@ import PromotionService from '../service/PromotionService';
 import MyNavBar from './MyNavBar';
 
 import jsPDF from 'jspdf'; import 'jspdf-autotable';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash , faEdit } from '@fortawesome/free-solid-svg-icons'
-
 
 
 

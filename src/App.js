@@ -54,47 +54,9 @@
 
 // export default App;
 
-// import {BrowserRouter as Switch , Route} from 'react-router-dom';
-// import {Navbar , Nav } from 'react-bootstrap'; 
-// import {Container, Row, Col} from 'react-bootstrap';
 
-// import EmpList from './Components/EmpList';
-// import CreateEmp from './Components/CreateEmp';
-// import SalaryList from './Components/SalaryList';
-// import CreateSalary from './Components/CreateSalary';
-// import UpdateSalary from './Components/UpdateSalary';
-// import UpdateEmployee from './Components/UpdateEmployee';
-// function App() {
 
-//   const marginLeft = {
-//     marginLeft : "300px"
-//   };
-
-//   return (
-//     
-//     <Container>
-//           <Row>
-//               <Col lg = {500} style = {marginLeft} />
-//               <Switch> 
-//                 <Route exact path="/CreateEmp" component = {CreateEmp}/>
-//                 <Route exact path="/EmpList" component = {EmpList}/>
-//                 <Route exact path="/SalaryList" component = {SalaryList}/>
-//                 <Route exact path="/CreateSalary" component = {CreateSalary}/>
-//                 <Route exact path="/UpdateSalary/:id" component = {UpdateSalary}/>
-//                 <Route exact path="/UpdateEmployee/:id" component = {UpdateEmployee}/>
-
-//     </Switch>
-//           </Row>
-//         </Container>
-  
-  
-  
-// </div>);
-// }
-
-// export default App;
-
- import React, { Component ,useEffect, useState } from 'react';
+ import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import UpdatePromotionsComponent from '../src/Components/UpdatePromotions';
@@ -110,7 +72,6 @@ import AddFoodItem from './Components/AddFoodItem';
 import UpdateFoodItem from './Components/UpdateFoodItem';
 import Body from './Components/Body';
 import {Container , Row} from 'react-bootstrap';
-import MyNavBar from './Components/MyNavBar'
 import About from './Components/About'
 import './App.css';
 import Shoppingcart from './Components/Shoppingcart';
@@ -145,6 +106,16 @@ import SalaryList from './Components/SalaryList';
 import CreateSalary from './Components/CreateSalary';
 import UpdateSalary from './Components/UpdateSalary';
 import UpdateEmployee from './Components/UpdateEmployee';
+
+import './Form2.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Form2 from './Components/Form2';
+import DriverList from './Components/DriverList';
+import VehicleList from './Components/VehicleList';
+import Form1 from './Components/Form';
+import UpdateDriver from './Components/UpdateDriver';
+import UpdateVehicle from './Components/UpdateVehicle';
+import deliveryHome from './Components/deliveryHome'
 
  
 import Routes from './Routes';
@@ -208,6 +179,15 @@ class App extends Component{
                  <Route exact path="/CreateSalary" component = {CreateSalary}/>
                  <Route exact path="/UpdateSalary/:id" component = {UpdateSalary}/>
                  <Route exact path="/UpdateEmployee/:id" component = {UpdateEmployee}/>
+
+                 <Route path = "/Form" exact component = {Form1}/>
+               <Route path = "/Form2" exact component = {Form2}/>
+              <Route path = "/DriverList" exact component = {DriverList}/>
+               <Route path = "/VehicleList" exact component = {VehicleList}/>
+               <Route path = "/UpdateDriver/:id" exact component = {UpdateDriver}/>
+               <Route path = "/UpdateVehicle/:id" exact component = {UpdateVehicle}/>
+               <Route path = "/deliveryhome" exact component = {deliveryHome}/>
+
            <Routes/>
 
             

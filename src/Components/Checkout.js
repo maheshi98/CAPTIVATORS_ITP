@@ -4,7 +4,6 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-// import axios from 'axios';
 import OrderService from '../service/OrderService';
 import MyToast from './MyToast'
 import { Link } from 'react-router-dom';
@@ -28,7 +27,6 @@ class Checkout extends React.Component{
             isPayareaHidden:true
         }
     }
-
   
     submitDet(event){
        // alert('email :this.state.email,Address:this.state.address,Land Mark:this.state.landMark,City:this.state.city,Zip:this.state.zip, Cutomer Name:this.state.name+',Contact Number:'+this.state.number+',Description:'+this.state.description+'');

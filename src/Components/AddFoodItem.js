@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-//import './Style.css';
 import {Jumbotron, Form, Col , Card} from 'react-bootstrap';
 import MenuService from '../Services/MenuService';
-// import { Card } from 'react-mdl';
 import MyNavBar from './MyNavBar';
 
 

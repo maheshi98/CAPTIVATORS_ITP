@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Style.css';
-import {Jumbotron, Form, Col, Card} from 'react-bootstrap';
+import {Jumbotron, Form, Col} from 'react-bootstrap';
 import UtilityService from '../Services/UtilityService';
 import Utilitynavbar from './UtilityNavbar';
 

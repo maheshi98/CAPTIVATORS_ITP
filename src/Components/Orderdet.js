@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, Table, ButtonGroup , Button } from 'react-bootstrap';
  import axios from 'axios';
 import OrderService from '../service/OrderService';
-import Pdfcomp from './Pdfcomp';
 import MyNavBar from './MyNavBar'
 import {Link} from 'react-router-dom'
 

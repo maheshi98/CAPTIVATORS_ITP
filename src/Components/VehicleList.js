@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
-import VehicleService from '../services/VehicleService';
+import VehicleService from '../Services/VehicleService';
 import jsPDF from 'jspdf';
+import MyNavBar from './MyNavBar';
 
 class VehicleList extends Component{
 
@@ -48,7 +49,9 @@ class VehicleList extends Component{
 
   render(){
         return(
-<div class="form-wrapper">
+          <div>
+            <MyNavBar></MyNavBar>
+<div class="form-wrapper" style={{marginTop:"3cm"}}>
 <h2 class="textcenter">Vehicle List</h2>
 <div className="row">
       <button style = {{marginLeft: "40px"}} className= "btn btn-primary" onClick= {this.insertVehicle}>Add Vehicle</button>
@@ -91,6 +94,7 @@ class VehicleList extends Component{
    </Table>
 
    </Card>
+</div>
 </div>
         )
     }

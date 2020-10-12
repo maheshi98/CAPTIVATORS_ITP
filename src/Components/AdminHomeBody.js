@@ -51,7 +51,7 @@ class  AdminHomebody extends Component{
               <div class = "admintext">Inventory Management</div></center></div></th>
               <th><div><center><Link to="utilityList"><img className = 'img1' src= {Img6}alt="utility"/></Link>
                   <div class = "admintext">Profit & Utility Management</div></center></div></th>
-              <th><div><center><img className = 'img1' src= {Img7}alt="delivery"/>
+              <th><div><center><Link to ="deliveryhome"><img className = 'img1' src= {Img7}alt="delivery"/></Link>
               <div class = "admintext">Delivery & Transport Management</div></center></div></th>
                <th><div><center><Link to="viewpromotions"><img className = 'img1' src= {Img8}alt="loyality"/></Link>
                <div class = "admintext">Customer Profile Management & Loyality Management</div></center></div></th>

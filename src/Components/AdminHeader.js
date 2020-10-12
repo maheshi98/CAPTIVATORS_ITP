@@ -1,11 +1,6 @@
 import React from 'react';
 import {Navbar , Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
-//import { BiBell } from "react-icons/bs"
-//import {FiLogOut} from 'react-icons/bs'
-
-//import logo from './mangologo.png'; // Tell webpack this JS file uses this image
-//console.log(logo);
 
 
 class AdminHeader extends React.Component {

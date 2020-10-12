@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import UtilityService from '../Services/UtilityService';
-//import {Link} from 'react-router-dom';
 import jsPDF from 'jspdf';
 import Utilitynavbar from './UtilityNavbar';
 import MyNavBar from './MyNavBar';
