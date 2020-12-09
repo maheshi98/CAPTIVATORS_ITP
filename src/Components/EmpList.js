@@ -28,7 +28,7 @@ export default class EmpList extends Component{
     AddEmp(){
       this.props.history.push(`/CreateEmp`);
     }
-
+ //retrive details
     componentDidMount(){
       EmployeeService.getEmployees().then((res) => {
        this.setState({employees : res.data});

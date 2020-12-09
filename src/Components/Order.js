@@ -63,19 +63,12 @@ class Order extends React.Component{
             orderlist=>[
 
                 orderlist.cartID,
-
                 orderlist.userId,
-
                 orderlist.productID,
-
                 orderlist.productName,
-
                 orderlist.unitPrice,
-
                 orderlist.quantity,
-
                 orderlist.unitPrice * orderlist.quantity,
-
 
             ]
 
